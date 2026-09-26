@@ -1,0 +1,37 @@
+{
+  "speakers": [
+    {
+      "id": "kef-r3",
+      "name": "KEF R3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true
+      }
+    },
+    {
+      "id": "genelec-8030c",
+      "name": "Genelec 8030C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true
+      }
+    },
+    {
+      "id": "neumann-kh-120-ii",
+      "name": "Neumann KH 120 II",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true
+      }
+    }
+  ]
+}
