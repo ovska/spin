@@ -2,15 +2,16 @@ import { useEffect } from 'preact/hooks';
 import { ensureSpeakerLoaded, loadSpeakerIndex } from './data/api';
 import { decodeHashToState, loadPrefs, noteRecentSpeaker, startHashSync, startPrefsPersistence } from './state/persistence';
 import { activeSpeakerId, referenceSpeakerId, selectedSpeakerIds, speakerIndex } from './state/speakers';
-import { currentTab } from './state/ui';
+import { currentTab, aboutOpen, settingsOpen } from './state/ui';
 import { SpeakerChips } from './components/SpeakerChips';
 import { SpeakerPicker } from './components/SpeakerPicker';
 import { ViewTabs } from './components/ViewTabs';
 import { PlotView } from './components/PlotView';
+import { OffAxisView } from './components/OffAxisView';
 import { CursorReadout } from './components/CursorReadout';
 import { Controls } from './components/Controls';
 import { AboutSheet } from './components/AboutSheet';
-import { aboutOpen } from './state/ui';
+import { SweetSpotSettingsSheet } from './components/SweetSpotSettingsSheet';
 import './app.css';
 
 function handleArrowKeys(e: KeyboardEvent): void {
@@ -47,6 +48,8 @@ export function App() {
     return () => window.removeEventListener('keydown', handleArrowKeys);
   }, []);
 
+  const tab = currentTab.value;
+
   return (
     <div class="app">
       <header class="app-header">
@@ -63,12 +66,28 @@ export function App() {
         </button>
       </header>
       <SpeakerChips />
-      <ViewTabs />
-      <PlotView view={currentTab.value} />
+      <div class="tabs-with-settings">
+        <ViewTabs />
+        {tab === 'sweetspot' && (
+          <button
+            type="button"
+            class="tabs-with-settings__gear"
+            aria-label="Sweet spot settings"
+            onClick={() => {
+              settingsOpen.value = true;
+            }}
+          >
+            ⚙
+          </button>
+        )}
+      </div>
+      {tab === 'offaxis' ? <OffAxisView /> : <PlotView view={tab} />}
+      {tab === 'sweetspot' && <p class="sweetspot-note">Off-plane points estimated from H/V planes.</p>}
       <CursorReadout />
       <Controls />
       <SpeakerPicker />
       <AboutSheet />
+      <SweetSpotSettingsSheet />
     </div>
   );
 }

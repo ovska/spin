@@ -10,34 +10,11 @@
 // operation.
 
 import { SP_WEIGHTS } from './weights.ts';
+import { energyAverage, splToPressure, pressureToSpl } from './energy.ts';
 
 /** One measurement plane: angle label ("On Axis", "10°", "-10°", ...) to a
  * dB curve aligned to the shared frequency grid. */
 export type Plane = Record<string, number[]>;
-
-function splToPressure(spl: number): number {
-  return Math.pow(10, (spl - 105.0) / 20.0);
-}
-
-function pressureToSpl(pressure: number): number {
-  return 105.0 + 20.0 * Math.log10(pressure);
-}
-
-function energyAverage(curves: number[][], weights?: number[]): number[] {
-  const n = curves[0]?.length ?? 0;
-  const out = new Array<number>(n);
-  const w = weights ?? curves.map(() => 1);
-  const wSum = w.reduce((a, b) => a + b, 0);
-  for (let i = 0; i < n; i++) {
-    let acc = 0;
-    for (let c = 0; c < curves.length; c++) {
-      const p = splToPressure(curves[c][i]);
-      acc += w[c] * p * p;
-    }
-    out[i] = pressureToSpl(Math.sqrt(acc / wSum));
-  }
-  return out;
-}
 
 function pick(plane: Plane, labels: string[]): number[][] {
   return labels.filter((l) => l in plane).map((l) => plane[l]);

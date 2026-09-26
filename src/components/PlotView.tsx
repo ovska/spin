@@ -3,10 +3,12 @@ import { effect } from '@preact/signals';
 import type { ChartController } from '../charts/ChartController';
 import { Cea2034Controller } from '../charts/Cea2034Controller';
 import { InRoomController } from '../charts/InRoomController';
+import { SweetSpotController } from '../charts/SweetSpotController';
 import { attachGestures } from '../charts/gestures';
 import { registerController } from '../charts/registry';
 import { activeSpeakerId, peeking, referenceSpeakerId, selectedSpeakerIds, speakerDataCache } from '../state/speakers';
 import { smoothing, xRange, ySpanDb } from '../state/settings';
+import { activeWindow, showPoints } from '../state/sweetspot';
 import { cursorFreqHz, type ViewId } from '../state/ui';
 import type { SpeakerData } from '../core/types';
 
@@ -16,6 +18,10 @@ function createController(view: ViewId, container: HTMLElement): ChartController
       return new Cea2034Controller(container);
     case 'inroom':
       return new InRoomController(container);
+    case 'sweetspot':
+      return new SweetSpotController(container);
+    case 'offaxis':
+      throw new Error('offaxis has its own OffAxisView, not PlotView');
   }
 }
 
@@ -68,6 +74,17 @@ export function PlotView({ view }: Props) {
         controller.applySmoothing(smoothing.value);
       }),
     ];
+
+    if (controller instanceof SweetSpotController) {
+      disposers.push(
+        effect(() => {
+          controller.setWindow(activeWindow.value);
+        }),
+        effect(() => {
+          controller.setShowPoints(showPoints.value);
+        }),
+      );
+    }
 
     const detachGestures = attachGestures(container, {
       getRange: () => xRange.value,

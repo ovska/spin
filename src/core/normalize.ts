@@ -3,13 +3,7 @@
 // so relative shapes (and directivity indices, which are already
 // differences) are preserved.
 
-function splToPressure(spl: number): number {
-  return Math.pow(10, (spl - 105.0) / 20.0);
-}
-
-function pressureToSpl(pressure: number): number {
-  return 105.0 + 20.0 * Math.log10(pressure);
-}
+import { splToPressure, pressureToSpl } from './energy.ts';
 
 export function energyMeanDb(freqHz: number[], valueDb: number[], fLo: number, fHi: number): number {
   let sumSq = 0;

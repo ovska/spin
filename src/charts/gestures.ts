@@ -12,7 +12,7 @@ export interface GestureCallbacks {
   /** Current x range in Hz, read fresh on every gesture step. */
   getRange: () => [number, number];
   setRange: (range: [number, number]) => void;
-  onTap: (xFraction: number) => void;
+  onTap: (xFraction: number, yFraction: number) => void;
   onHoldStart: () => void;
   onHoldEnd: () => void;
 }
@@ -162,7 +162,7 @@ export function attachGestures(el: HTMLElement, cb: GestureCallbacks): () => voi
         const dy = Math.abs(p.y - p.startY);
         if (dx < TAP_MAX_MOVE_PX && dy < TAP_MAX_MOVE_PX) {
           const rect = el.getBoundingClientRect();
-          cb.onTap((p.x - rect.left) / rect.width);
+          cb.onTap((p.x - rect.left) / rect.width, (p.y - rect.top) / rect.height);
         }
       }
       gestureStartedDrag = false;

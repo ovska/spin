@@ -86,6 +86,10 @@ export abstract class ChartController {
     for (const u of this.plots.values()) fn(u);
   }
 
+  protected getAllRawData(): [string, SpeakerData][] {
+    return Array.from(this.rawData.entries());
+  }
+
   /** Value of every series at a frequency, for the cursor readout row. */
   valuesAt(id: string | null, freqHz: number): number[] | null {
     const u = this.getPlot(id);
@@ -105,6 +109,9 @@ export abstract class ChartController {
 
   dispose(): void {
     for (const u of this.plots.values()) u.destroy();
+    // u.destroy() only removes uPlot's own root; our wrapper div (created in
+    // ensureSpeaker to hold it, and toggled by setVisible) is ours to detach.
+    for (const el of this.wrappers.values()) el.remove();
     this.plots.clear();
     this.wrappers.clear();
     this.rawData.clear();
