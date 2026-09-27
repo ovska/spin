@@ -45,7 +45,21 @@ export function baseOptions(width: number, height: number): Partial<uPlot.Option
       // initMin/initMax back through once they're non-null keeps the fixed
       // default for the very first auto-scale while still letting zoom/pan
       // stick.
-      x: { time: false, distr: 3, range: (_u, initMin, initMax) => (initMin == null ? [20, 20000] : [initMin, initMax]) },
+      //
+      // auto: false matters just as much as that passthrough: since range
+      // is a function (not a literal array), uPlot's default would treat
+      // the scale as auto-ranging, and every setData() call (e.g. changing
+      // smoothing) would re-derive [min, max] from the new data's own
+      // extent - always [20, 20000], the full grid - discarding whatever
+      // zoom/pan was active. With auto: false, setData instead re-applies
+      // the scale's own current min/max through range() (the initMin/
+      // initMax path above), so the zoom survives.
+      x: {
+        time: false,
+        distr: 3,
+        auto: false,
+        range: (_u, initMin, initMax) => (initMin == null ? [20, 20000] : [initMin, initMax]),
+      },
     },
     axes: [
       {

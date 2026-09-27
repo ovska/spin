@@ -175,8 +175,7 @@ export class SweetSpotController extends ChartController {
   private refreshAll(): void {
     for (const [id, data] of this.getAllRawData()) {
       const plot = this.getPlot(id);
-      // false: preserve the user's current zoom/pan - see ChartController.applySmoothing.
-      if (plot) plot.setData(this.buildData(data, this.currentSmoothing), false);
+      if (plot) plot.setData(this.buildData(data, this.currentSmoothing));
     }
   }
 

@@ -65,10 +65,7 @@ export abstract class ChartController {
   applySmoothing(smoothing: SmoothingMode): void {
     for (const [id, u] of this.plots) {
       const data = this.rawData.get(id);
-      // false: only the series data changed, not the zoom/pan the user has
-      // set - uPlot's default (true) re-derives scales from the new data,
-      // which would snap the x-range back to "Full" on every smoothing change.
-      if (data) u.setData(this.buildData(data, smoothing), false);
+      if (data) u.setData(this.buildData(data, smoothing));
     }
   }
 
