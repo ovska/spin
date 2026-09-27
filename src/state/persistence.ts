@@ -8,6 +8,8 @@ import { smoothing, ySpanDb, zoomPreset, xRange, ZOOM_RANGES, type YSpanDb, type
 import { activeSpeakerId, referenceSpeakerId, recentSpeakerIds, favoriteSpeakerIds, selectedSpeakerIds } from './speakers';
 import { currentTab, type ViewId, ALL_VIEWS, pickerSortMode, type PickerSortMode } from './ui';
 import { offAxisAngleDeg, offAxisPlane } from './offaxis';
+import { sweetSpotMode, geometry, manualWindow, showPoints, type SweetSpotMode } from './sweetspot';
+import type { AngleWindow, ListenerGeometry } from '../core/sweetspot';
 import { applyTheme, themeMode, type ThemeMode } from './theme';
 
 const PREFS_KEY = 'spin:prefs';
@@ -20,8 +22,14 @@ interface Prefs {
   recentSpeakerIds: string[];
   favoriteSpeakerIds: string[];
   pickerSortMode: PickerSortMode;
+  sweetSpotMode: SweetSpotMode;
+  geometry: ListenerGeometry;
+  manualWindow: AngleWindow;
+  showPoints: boolean;
   themeMode: ThemeMode;
 }
+
+const SWEET_SPOT_MODES: SweetSpotMode[] = ['geometry', 'manual'];
 
 const PICKER_SORT_MODES: PickerSortMode[] = ['recent', 'alphabetical', 'prefScore', 'lowEndExtension', 'smoothness'];
 
@@ -72,6 +80,10 @@ export function loadPrefs(): void {
     if (Array.isArray(prefs.recentSpeakerIds)) recentSpeakerIds.value = prefs.recentSpeakerIds;
     if (Array.isArray(prefs.favoriteSpeakerIds)) favoriteSpeakerIds.value = prefs.favoriteSpeakerIds;
     if (prefs.pickerSortMode && PICKER_SORT_MODES.includes(prefs.pickerSortMode)) pickerSortMode.value = prefs.pickerSortMode;
+    if (prefs.sweetSpotMode && SWEET_SPOT_MODES.includes(prefs.sweetSpotMode)) sweetSpotMode.value = prefs.sweetSpotMode;
+    if (prefs.geometry) geometry.value = prefs.geometry;
+    if (prefs.manualWindow) manualWindow.value = prefs.manualWindow;
+    if (typeof prefs.showPoints === 'boolean') showPoints.value = prefs.showPoints;
     if (prefs.themeMode && THEME_MODES.includes(prefs.themeMode)) themeMode.value = prefs.themeMode;
   } catch {
     // corrupt prefs blob - ignore and start fresh
@@ -90,6 +102,10 @@ export function startPrefsPersistence(): void {
       recentSpeakerIds: recentSpeakerIds.value,
       favoriteSpeakerIds: favoriteSpeakerIds.value,
       pickerSortMode: pickerSortMode.value,
+      sweetSpotMode: sweetSpotMode.value,
+      geometry: geometry.value,
+      manualWindow: manualWindow.value,
+      showPoints: showPoints.value,
       themeMode: themeMode.value,
     };
     safeSet(PREFS_KEY, JSON.stringify(prefs));

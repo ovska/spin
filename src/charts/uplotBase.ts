@@ -1,7 +1,16 @@
 import uPlot from 'uplot';
 import { AXIS_COLOR, GRID_COLOR } from './palette';
+import { GRID_FMIN, GRID_FMAX } from '../core/grid';
 
-const FREQ_TICKS = [20, 30, 50, 70, 100, 200, 300, 500, 700, 1000, 2000, 3000, 5000, 7000, 10000, 20000];
+// Every integer multiple of a power of ten within the domain (20, 30, ...,
+// 90, 100, 200, ..., 900, 1000, ...) - a full decade grid, not just the
+// "1-2-3-5-7" subset. uPlot draws a gridline for every entry here
+// regardless of which labels freqAxisValues nulls out for collision, so
+// this only densifies the lines; the labels shown still thin themselves
+// out automatically.
+const FREQ_TICKS: number[] = [10, 100, 1000, 10000].flatMap((decadeStart) =>
+  Array.from({ length: 9 }, (_, i) => decadeStart * (i + 1)).filter((f) => f >= GRID_FMIN && f <= GRID_FMAX),
+);
 
 function formatFreq(hz: number): string {
   if (hz >= 1000) {
