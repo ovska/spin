@@ -1,38 +1,24 @@
-// Discrete 3dB-band sequential palette for the off-axis heatmap, from -30dB
-// (quiet off-axis) to +3dB (louder than on-axis) relative to on-axis.
-// Single hue family with monotonically increasing lightness, so the bands
-// stay ordered under the common color-vision deficiencies, not just to
-// full-color vision.
+// Continuous sequential palette for the off-axis heatmap: single hue family
+// (indigo -> green -> yellow), with monotonically increasing lightness so
+// values stay ordered under the common color-vision deficiencies, mapped
+// onto whatever [min, max] dB range the caller supplies. The range is
+// picked per-view from the actual spread of the selected speakers' data
+// (see OffAxisHeatmapController) rather than fixed, since most speakers'
+// off-axis deviation never gets close to a fixed wide range and would
+// otherwise render as one or two colors the whole time.
 
-export const HEATMAP_BAND_MIN = -30;
-export const HEATMAP_BAND_MAX = 3;
-export const HEATMAP_BAND_STEP = 3;
-const BAND_COUNT = (HEATMAP_BAND_MAX - HEATMAP_BAND_MIN) / HEATMAP_BAND_STEP;
-
-function hslToHex(h: number, s: number, l: number): string {
-  const a = (s * Math.min(l, 1 - l)) / 1;
+function hslToRgb(h: number, s: number, l: number): [number, number, number] {
+  const a = s * Math.min(l, 1 - l);
   const f = (n: number) => {
     const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1));
-    return Math.round(255 * color)
-      .toString(16)
-      .padStart(2, '0');
+    return Math.round(255 * (l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1))));
   };
-  return `#${f(0)}${f(8)}${f(4)}`;
+  return [f(0), f(8), f(4)];
 }
 
-export const HEATMAP_COLORS: string[] = Array.from({ length: BAND_COUNT }, (_, i) => {
-  const t = i / (BAND_COUNT - 1);
+export function heatmapRgbForValue(v: number, min: number, max: number): [number, number, number] {
+  const t = max > min ? Math.min(1, Math.max(0, (v - min) / (max - min))) : 0.5;
   const hue = 260 - t * 200; // indigo (260) -> green -> yellow (~60)
   const lightness = 0.18 + t * 0.62;
-  return hslToHex(hue, 0.75, lightness);
-});
-
-export function heatmapColorForValue(v: number): string {
-  const clamped = Math.min(HEATMAP_BAND_MAX, Math.max(HEATMAP_BAND_MIN, v));
-  const idx = Math.min(
-    HEATMAP_COLORS.length - 1,
-    Math.floor((clamped - HEATMAP_BAND_MIN) / HEATMAP_BAND_STEP),
-  );
-  return HEATMAP_COLORS[idx];
+  return hslToRgb(hue, 0.75, lightness);
 }

@@ -2,7 +2,7 @@ import uPlot from 'uplot';
 import { ChartController } from './ChartController';
 import { baseOptions } from './uplotBase';
 import { AXIS_COLOR } from './palette';
-import { heatmapColorForValue } from './heatmapPalette';
+import { heatmapRgbForValue } from './heatmapPalette';
 import { getOffAxisTable, H_ANGLE_MIN, H_ANGLE_MAX, V_ANGLE_MIN, V_ANGLE_MAX, type OffAxisTable } from './offAxisTable';
 import { GRID_FMIN, GRID_FMAX } from '../core/grid';
 import type { SmoothingMode } from '../core/smoothing';
@@ -11,16 +11,19 @@ import type { SpeakerData } from '../core/types';
 import type { YSpanDb } from '../state/settings';
 import type { OffAxisPlane } from '../state/offaxis';
 
-function hexToRgb(hex: string): [number, number, number] {
-  const n = parseInt(hex.slice(1), 16);
-  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-}
 export class OffAxisHeatmapController extends ChartController {
   private plane: OffAxisPlane = 'horizontal';
   private selectedAngle = 0;
   private sweetSpotWindow: AngleWindow | null = null;
   private rasters = new Map<string, HTMLCanvasElement>();
   private idByPlot = new Map<uPlot, string>();
+  private currentSmoothing: SmoothingMode = 'none';
+  // The color scale's [min, max] dB-relative-to-on-axis range - the widest
+  // spread found across every selected speaker in the current plane, so
+  // quiet speakers don't all render as a single color and comparisons
+  // between speakers share one scale. Recomputed whenever the selected set,
+  // plane, or smoothing changes (see recomputeRangeAndRedraw).
+  private range: [number, number] = [-1, 1];
 
   private angleRange(): [number, number] {
     return this.plane === 'horizontal' ? [H_ANGLE_MIN, H_ANGLE_MAX] : [V_ANGLE_MIN, V_ANGLE_MAX];
@@ -43,12 +46,35 @@ export class OffAxisHeatmapController extends ChartController {
 
   protected buildData(data: SpeakerData, mode: SmoothingMode): uPlot.AlignedData {
     const table = getOffAxisTable(data, mode);
-    this.rebuildRaster(data.id, table);
     return [table.freqHz, table.freqHz.map(() => 0)];
   }
 
+  private rowsFor(table: OffAxisTable): OffAxisTable['horizontal' | 'vertical'] {
+    return this.plane === 'horizontal' ? table.horizontal : table.vertical;
+  }
+
+  /** Widest [min, max] deviation-from-on-axis found across every currently
+   * loaded speaker, for the current plane - the shared color scale's range. */
+  private computeRange(tables: OffAxisTable[]): [number, number] {
+    let min = Infinity;
+    let max = -Infinity;
+    for (const table of tables) {
+      const rows = this.rowsFor(table);
+      for (const curve of rows.curves) {
+        for (let col = 0; col < curve.length; col++) {
+          const v = curve[col] - table.onAxis[col];
+          if (v < min) min = v;
+          if (v > max) max = v;
+        }
+      }
+    }
+    if (!Number.isFinite(min) || !Number.isFinite(max)) return [-1, 1];
+    if (min === max) return [min - 1, max + 1];
+    return [min, max];
+  }
+
   private rebuildRaster(id: string, table: OffAxisTable): void {
-    const rows = this.plane === 'horizontal' ? table.horizontal : table.vertical;
+    const rows = this.rowsFor(table);
     const w = table.freqHz.length;
     const h = rows.curves.length;
     const canvas = document.createElement('canvas');
@@ -56,12 +82,13 @@ export class OffAxisHeatmapController extends ChartController {
     canvas.height = h;
     const ctx = canvas.getContext('2d')!;
     const img = ctx.createImageData(w, h);
+    const [min, max] = this.range;
     for (let row = 0; row < h; row++) {
       const canvasY = h - 1 - row; // flip: image row 0 (top) = highest angle
       const curve = rows.curves[row];
       for (let col = 0; col < w; col++) {
         const value = curve[col] - table.onAxis[col];
-        const [r, g, b] = hexToRgb(heatmapColorForValue(value));
+        const [r, g, b] = heatmapRgbForValue(value, min, max);
         const idx = (canvasY * w + col) * 4;
         img.data[idx] = r;
         img.data[idx + 1] = g;
@@ -71,6 +98,16 @@ export class OffAxisHeatmapController extends ChartController {
     }
     ctx.putImageData(img, 0, 0);
     this.rasters.set(id, canvas);
+  }
+
+  /** Recomputes the shared color range from every loaded speaker's current
+   * table (for the current plane/smoothing) and rebuilds every raster with
+   * it - called whenever the selected set, plane, or smoothing changes. */
+  private recomputeRangeAndRedraw(): void {
+    const entries = this.getAllRawData().map(([id, data]) => [id, getOffAxisTable(data, this.currentSmoothing)] as const);
+    this.range = this.computeRange(entries.map(([, table]) => table));
+    for (const [id, table] of entries) this.rebuildRaster(id, table);
+    this.forEachPlot((u) => u.redraw());
   }
 
   private draw(u: uPlot): void {
@@ -120,6 +157,7 @@ export class OffAxisHeatmapController extends ChartController {
     if (wasNew) {
       const plot = this.getPlot(id);
       if (plot) this.idByPlot.set(plot, id);
+      this.recomputeRangeAndRedraw();
     }
   }
 
@@ -128,23 +166,20 @@ export class OffAxisHeatmapController extends ChartController {
       if (!ids.has(id)) this.rasters.delete(id);
     }
     super.pruneTo(ids);
+    this.recomputeRangeAndRedraw();
   }
-
-  private currentSmoothing: SmoothingMode = 'none';
 
   setPlane(plane: OffAxisPlane): void {
     if (this.plane === plane) return;
     this.plane = plane;
     this.forEachPlot((u) => u.setScale('ang', { min: this.angleRange()[0], max: this.angleRange()[1] }));
-    for (const [id, data] of this.getAllRawData()) {
-      this.rebuildRaster(id, getOffAxisTable(data, this.currentSmoothing));
-    }
-    this.forEachPlot((u) => u.redraw());
+    this.recomputeRangeAndRedraw();
   }
 
   applySmoothing(smoothing: SmoothingMode): void {
     this.currentSmoothing = smoothing;
     super.applySmoothing(smoothing);
+    this.recomputeRangeAndRedraw();
   }
 
   setSelectedAngle(deg: number): void {

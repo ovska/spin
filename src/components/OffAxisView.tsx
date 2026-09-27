@@ -144,7 +144,8 @@ export function OffAxisView() {
   const plane = offAxisPlane.value;
   const [angMin, angMax] = angleRangeFor(plane);
   const angle = offAxisAngleDeg.value;
-  const isMeasured = Math.round(angle) % 10 === 0;
+  const measuredAngles: number[] = [];
+  for (let a = Math.ceil(angMin / 10) * 10; a <= angMax; a += 10) measuredAngles.push(a);
 
   return (
     <div class="offaxis-view">
@@ -179,13 +180,19 @@ export function OffAxisView() {
           max={angMax}
           step={1}
           value={angle}
+          list="offaxis-measured-angles"
           onInput={(e) => {
             offAxisAngleDeg.value = Number((e.target as HTMLInputElement).value);
           }}
         />
-        <span class="offaxis-view__angle-label">
-          {angle}° ({isMeasured ? 'measured' : 'interpolated'})
-        </span>
+        {/* Tick marks at the actual measured angles (every 10°) - the rest
+         * of the range is PCHIP-interpolated between them, see offAxisTable.ts. */}
+        <datalist id="offaxis-measured-angles">
+          {measuredAngles.map((deg) => (
+            <option key={deg} value={deg} />
+          ))}
+        </datalist>
+        <span class="offaxis-view__angle-label">{angle}°</span>
       </div>
     </div>
   );
