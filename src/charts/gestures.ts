@@ -1,8 +1,10 @@
 // Pointer-event gesture handling for a plot: horizontal drag pans the log
-// frequency axis, pinch zooms it, a quick tap sets the cursor, and a
-// press-and-hold (~250ms, plot not the chip) peeks at the reference speaker.
-// uPlot's own drag-to-zoom box is disabled (see uplotBase.ts) so this is the
-// only thing driving x-range changes from user input.
+// frequency axis, pinch zooms it, a press-and-hold (~250ms, plot not the
+// chip) peeks at the reference speaker, and a quick tap reports where on
+// the plot it landed (onTap is optional - the off-axis heatmap uses it to
+// pick an angle, other views have no use for a tap and omit it). uPlot's
+// own drag-to-zoom box is disabled (see uplotBase.ts) so this is the only
+// thing driving x-range changes from user input.
 
 const TAP_MAX_MOVE_PX = 10;
 const HOLD_MS = 250;
@@ -12,7 +14,7 @@ export interface GestureCallbacks {
   /** Current x range in Hz, read fresh on every gesture step. */
   getRange: () => [number, number];
   setRange: (range: [number, number]) => void;
-  onTap: (xFraction: number, yFraction: number) => void;
+  onTap?: (xFraction: number, yFraction: number) => void;
   onHoldStart: () => void;
   onHoldEnd: () => void;
 }
@@ -162,7 +164,7 @@ export function attachGestures(el: HTMLElement, cb: GestureCallbacks): () => voi
         const dy = Math.abs(p.y - p.startY);
         if (dx < TAP_MAX_MOVE_PX && dy < TAP_MAX_MOVE_PX) {
           const rect = el.getBoundingClientRect();
-          cb.onTap((p.x - rect.left) / rect.width, (p.y - rect.top) / rect.height);
+          cb.onTap?.((p.x - rect.left) / rect.width, (p.y - rect.top) / rect.height);
         }
       }
       gestureStartedDrag = false;

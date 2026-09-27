@@ -3,13 +3,11 @@ import { effect } from '@preact/signals';
 import { OffAxisHeatmapController } from '../charts/OffAxisHeatmapController';
 import { OffAxisCurveController } from '../charts/OffAxisCurveController';
 import { attachGestures } from '../charts/gestures';
-import { registerController } from '../charts/registry';
 import { H_ANGLE_MIN, H_ANGLE_MAX, V_ANGLE_MIN, V_ANGLE_MAX } from '../charts/offAxisTable';
 import { activeSpeakerId, peeking, referenceSpeakerId, selectedSpeakerIds, speakerDataCache } from '../state/speakers';
 import { smoothing, xRange, ySpanDb } from '../state/settings';
 import { activeWindow } from '../state/sweetspot';
 import { offAxisAngleDeg, offAxisPlane, type OffAxisPlane } from '../state/offaxis';
-import { cursorFreqHz } from '../state/ui';
 import type { SpeakerData } from '../core/types';
 
 function angleRangeFor(plane: OffAxisPlane): [number, number] {
@@ -27,7 +25,6 @@ export function OffAxisView() {
 
     const heatmap = new OffAxisHeatmapController(heatmapEl);
     const curve = new OffAxisCurveController(curveEl);
-    registerController('offaxis', curve);
 
     function visibleId(): string | null {
       return peeking.value && referenceSpeakerId.value ? referenceSpeakerId.value : activeSpeakerId.value;
@@ -81,12 +78,7 @@ export function OffAxisView() {
       setRange: (r) => {
         xRange.value = r;
       },
-      onTap: (xFraction, yFraction) => {
-        const [lo, hi] = xRange.value;
-        const loLog = Math.log10(lo);
-        const hiLog = Math.log10(hi);
-        cursorFreqHz.value = Math.pow(10, loLog + xFraction * (hiLog - loLog));
-
+      onTap: (_xFraction, yFraction) => {
         const [angMin, angMax] = angleRangeFor(offAxisPlane.value);
         const angle = Math.round(angMax - yFraction * (angMax - angMin));
         offAxisAngleDeg.value = Math.max(angMin, Math.min(angMax, angle));
@@ -103,12 +95,6 @@ export function OffAxisView() {
       getRange: () => xRange.value,
       setRange: (r) => {
         xRange.value = r;
-      },
-      onTap: (xFraction) => {
-        const [lo, hi] = xRange.value;
-        const loLog = Math.log10(lo);
-        const hiLog = Math.log10(hi);
-        cursorFreqHz.value = Math.pow(10, loLog + xFraction * (hiLog - loLog));
       },
       onHoldStart: () => {
         peeking.value = true;
@@ -135,7 +121,6 @@ export function OffAxisView() {
       detachCurveGestures();
       heatmapResize.disconnect();
       curveResize.disconnect();
-      registerController('offaxis', null);
       heatmap.dispose();
       curve.dispose();
     };

@@ -23,8 +23,14 @@ function smoothPlane(plane: Plane | undefined, freq: number[], mode: SmoothingMo
   return out;
 }
 
-const LIGHT_BAND = 'rgba(31,119,180,0.16)';
-const DARK_BAND = 'rgba(31,119,180,0.32)';
+// Three nested, distinctly-colored bands (painted outer-to-inner, each on
+// top of the last) instead of shades of one color, so the width of the
+// spread reads at a glance: red at center (the tightest third of samples -
+// closest to typical), through yellow (the next third out), to green at
+// the outer third (the widest excursions, min/max included).
+const OUTER_BAND = 'rgba(46,160,67,0.30)';
+const MIDDLE_BAND = 'rgba(219,171,36,0.40)';
+const CENTER_BAND = 'rgba(214,39,40,0.45)';
 const POINT_STROKE = 'rgba(31,119,180,0.15)';
 
 export class SweetSpotController extends ChartController {
@@ -91,8 +97,9 @@ export class SweetSpotController extends ChartController {
 
   private drawBands(u: uPlot, result: SweetSpotResult): void {
     const xs = u.data[0] as number[];
-    this.fillBetween(u, xs, result.max, result.min, LIGHT_BAND);
-    this.fillBetween(u, xs, result.p75, result.p25, DARK_BAND);
+    this.fillBetween(u, xs, result.max, result.min, OUTER_BAND);
+    this.fillBetween(u, xs, result.outerHigh, result.outerLow, MIDDLE_BAND);
+    this.fillBetween(u, xs, result.innerHigh, result.innerLow, CENTER_BAND);
   }
 
   private drawPoints(u: uPlot, result: SweetSpotResult): void {
@@ -180,27 +187,5 @@ export class SweetSpotController extends ChartController {
   applyYSpan(spanDb: YSpanDb): void {
     this.spanDb = spanDb;
     this.forEachPlot((u) => u.setScale('db', { min: -spanDb, max: spanDb }));
-  }
-
-  /** Average, min, max, 25th and 75th percentile at a frequency - for the
-   * cursor readout, which knows this view's specific 5-number layout. */
-  valuesAt(id: string | null, freqHz: number): number[] | null {
-    if (!id) return null;
-    const result = this.resultById.get(id);
-    const u = this.getPlot(id);
-    if (!result || !u) return null;
-    const xs = u.data[0] as number[];
-    let lo = 0;
-    let hi = xs.length - 1;
-    while (lo < hi) {
-      const mid = (lo + hi) >> 1;
-      if (xs[mid] < freqHz) lo = mid + 1;
-      else hi = mid;
-    }
-    return [result.average[lo], result.min[lo], result.max[lo], result.p25[lo], result.p75[lo]];
-  }
-
-  seriesMeta(): { label: string; color: string }[] {
-    return [{ label: 'Average', color: CURVE_COLOR.onAxis }];
   }
 }

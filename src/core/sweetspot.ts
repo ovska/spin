@@ -59,12 +59,19 @@ export interface SweetSpotSample {
   curve: number[];
 }
 
+/** Boundaries splitting the spread at each frequency into three
+ * equal-population bands, for the Sweet spot view's shading: the center
+ * third (innerLow-innerHigh), flanked by a second third on each side
+ * (outerLow-innerLow and innerHigh-outerHigh), with the remaining sixths
+ * out to min/max as the outermost band. */
 export interface SweetSpotResult {
   average: number[];
   min: number[];
   max: number[];
-  p25: number[];
-  p75: number[];
+  outerLow: number[];
+  innerLow: number[];
+  innerHigh: number[];
+  outerHigh: number[];
   samples: SweetSpotSample[];
 }
 
@@ -97,15 +104,19 @@ export function computeSweetSpot(
   const average = energyAverage(samples.map((s) => s.curve));
   const min = new Array<number>(freqLen);
   const max = new Array<number>(freqLen);
-  const p25 = new Array<number>(freqLen);
-  const p75 = new Array<number>(freqLen);
+  const outerLow = new Array<number>(freqLen);
+  const innerLow = new Array<number>(freqLen);
+  const innerHigh = new Array<number>(freqLen);
+  const outerHigh = new Array<number>(freqLen);
   for (let f = 0; f < freqLen; f++) {
     const col = samples.map((s) => s.curve[f]).sort((a, b) => a - b);
     min[f] = col[0];
     max[f] = col[col.length - 1];
-    p25[f] = percentile(col, 0.25);
-    p75[f] = percentile(col, 0.75);
+    outerLow[f] = percentile(col, 1 / 6);
+    innerLow[f] = percentile(col, 1 / 3);
+    innerHigh[f] = percentile(col, 2 / 3);
+    outerHigh[f] = percentile(col, 5 / 6);
   }
 
-  return { average, min, max, p25, p75, samples };
+  return { average, min, max, outerLow, innerLow, innerHigh, outerHigh, samples };
 }

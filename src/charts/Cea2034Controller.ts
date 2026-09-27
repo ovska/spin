@@ -61,8 +61,4 @@ export class Cea2034Controller extends ChartController {
     this.spanDb = spanDb;
     this.forEachPlot((u) => u.setScale('db', { min: -spanDb, max: spanDb }));
   }
-
-  seriesMeta(): { label: string; color: string }[] {
-    return CEA2034_SERIES.map((s) => ({ label: s.label, color: s.color }));
-  }
 }

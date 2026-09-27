@@ -24,8 +24,9 @@ export function freqAxisValues(_u: uPlot, splits: (number | null)[]): string[] {
 }
 
 /** Shared uPlot options: log frequency x axis, no built-in drag/zoom box (a
- * custom gesture handler owns pan/pinch), no point markers, no legend (the
- * cursor readout row replaces it), touch-action left to the caller's CSS. */
+ * custom gesture handler owns pan/pinch), no point markers, no legend (this
+ * is a quick-eyeballing tool, not a precise-readout one), touch-action left
+ * to the caller's CSS. */
 export function baseOptions(width: number, height: number): Partial<uPlot.Options> {
   return {
     width,

@@ -41,8 +41,4 @@ export class InRoomController extends ChartController {
     this.spanDb = spanDb;
     this.forEachPlot((u) => u.setScale('db', { min: -spanDb, max: spanDb }));
   }
-
-  seriesMeta(): { label: string; color: string }[] {
-    return [{ label: 'Estimated In-Room Response', color: CURVE_COLOR.estimatedInRoom }];
-  }
 }

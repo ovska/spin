@@ -5,11 +5,10 @@ import { Cea2034Controller } from '../charts/Cea2034Controller';
 import { InRoomController } from '../charts/InRoomController';
 import { SweetSpotController } from '../charts/SweetSpotController';
 import { attachGestures } from '../charts/gestures';
-import { registerController } from '../charts/registry';
 import { activeSpeakerId, peeking, referenceSpeakerId, selectedSpeakerIds, speakerDataCache } from '../state/speakers';
 import { smoothing, xRange, ySpanDb } from '../state/settings';
 import { activeWindow, showPoints } from '../state/sweetspot';
-import { cursorFreqHz, type ViewId } from '../state/ui';
+import type { ViewId } from '../state/ui';
 import type { SpeakerData } from '../core/types';
 
 function createController(view: ViewId, container: HTMLElement): ChartController {
@@ -41,7 +40,6 @@ export function PlotView({ view }: Props) {
     if (!container) return undefined;
 
     const controller = createController(view, container);
-    registerController(view, controller);
 
     const disposers: (() => void)[] = [
       // One effect for both "which speakers exist" and "which is visible":
@@ -91,12 +89,6 @@ export function PlotView({ view }: Props) {
       setRange: (r) => {
         xRange.value = r;
       },
-      onTap: (xFraction) => {
-        const [lo, hi] = xRange.value;
-        const loLog = Math.log10(lo);
-        const hiLog = Math.log10(hi);
-        cursorFreqHz.value = Math.pow(10, loLog + xFraction * (hiLog - loLog));
-      },
       onHoldStart: () => {
         peeking.value = true;
       },
@@ -115,7 +107,6 @@ export function PlotView({ view }: Props) {
       for (const dispose of disposers) dispose();
       detachGestures();
       resizeObserver.disconnect();
-      registerController(view, null);
       controller.dispose();
     };
   }, [view]);

@@ -69,11 +69,4 @@ export class OffAxisCurveController extends ChartController {
     this.spanDb = spanDb;
     this.forEachPlot((u) => u.setScale('db', { min: -spanDb, max: spanDb }));
   }
-
-  seriesMeta(): { label: string; color: string }[] {
-    return [
-      { label: 'On Axis', color: CURVE_COLOR.reference },
-      { label: 'Selected angle', color: CURVE_COLOR.onAxis },
-    ];
-  }
 }

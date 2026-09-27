@@ -24,9 +24,6 @@ export abstract class ChartController {
   protected abstract buildOptions(width: number, height: number): uPlot.Options;
   protected abstract buildData(data: SpeakerData, smoothing: SmoothingMode): uPlot.AlignedData;
   abstract applyYSpan(spanDb: YSpanDb): void;
-  /** Series shown, in the same order as buildData's non-x columns - drives
-   * the cursor readout row. */
-  abstract seriesMeta(): { label: string; color: string }[];
 
   ensureSpeaker(id: string, data: SpeakerData, smoothing: SmoothingMode): void {
     if (this.plots.has(id)) return;
@@ -88,23 +85,6 @@ export abstract class ChartController {
 
   protected getAllRawData(): [string, SpeakerData][] {
     return Array.from(this.rawData.entries());
-  }
-
-  /** Value of every series at a frequency, for the cursor readout row. */
-  valuesAt(id: string | null, freqHz: number): number[] | null {
-    const u = this.getPlot(id);
-    if (!u) return null;
-    const xs = u.data[0] as number[];
-    if (xs.length === 0) return null;
-    let lo = 0;
-    let hi = xs.length - 1;
-    while (lo < hi) {
-      const mid = (lo + hi) >> 1;
-      if (xs[mid] < freqHz) lo = mid + 1;
-      else hi = mid;
-    }
-    const idx = lo;
-    return u.data.slice(1).map((series) => (series as number[])[idx]);
   }
 
   dispose(): void {

@@ -56,11 +56,13 @@ describe('computeSweetSpot', () => {
     expect(result.average).toEqual([0, 0]);
     expect(result.min).toEqual([0, 0]);
     expect(result.max).toEqual([0, 0]);
-    expect(result.p25).toEqual([0, 0]);
-    expect(result.p75).toEqual([0, 0]);
+    expect(result.outerLow).toEqual([0, 0]);
+    expect(result.innerLow).toEqual([0, 0]);
+    expect(result.innerHigh).toEqual([0, 0]);
+    expect(result.outerHigh).toEqual([0, 0]);
   });
 
-  it('produces min <= p25 <= p75 <= max at every frequency', () => {
+  it('produces min <= outerLow <= innerLow <= innerHigh <= outerHigh <= max at every frequency', () => {
     const angles = ['On Axis', '10°', '-10°', '20°', '-20°', '30°', '-30°'];
     const h: Plane = Object.fromEntries(angles.map((a, i) => [a, [i, -i]]));
     const v: Plane = Object.fromEntries(angles.map((a, i) => [a, [-i, i]]));
@@ -68,9 +70,11 @@ describe('computeSweetSpot', () => {
 
     const result = computeSweetSpot(h, v, onAxis, 2, { hMin: -20, hMax: 20, vMin: -15, vMax: 15 });
     for (let f = 0; f < 2; f++) {
-      expect(result.min[f]).toBeLessThanOrEqual(result.p25[f] + 1e-9);
-      expect(result.p25[f]).toBeLessThanOrEqual(result.p75[f] + 1e-9);
-      expect(result.p75[f]).toBeLessThanOrEqual(result.max[f] + 1e-9);
+      expect(result.min[f]).toBeLessThanOrEqual(result.outerLow[f] + 1e-9);
+      expect(result.outerLow[f]).toBeLessThanOrEqual(result.innerLow[f] + 1e-9);
+      expect(result.innerLow[f]).toBeLessThanOrEqual(result.innerHigh[f] + 1e-9);
+      expect(result.innerHigh[f]).toBeLessThanOrEqual(result.outerHigh[f] + 1e-9);
+      expect(result.outerHigh[f]).toBeLessThanOrEqual(result.max[f] + 1e-9);
     }
   });
 });

@@ -203,8 +203,4 @@ export class OffAxisHeatmapController extends ChartController {
   applyYSpan(_spanDb: YSpanDb): void {
     // Heatmap's y axis is angle, not dB - y-span doesn't apply.
   }
-
-  seriesMeta(): { label: string; color: string }[] {
-    return [];
-  }
 }
