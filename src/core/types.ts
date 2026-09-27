@@ -18,6 +18,12 @@ export interface CurveSet {
  * arbitrary angles/windows for Sweet spot and Off-axis. */
 export type PlaneJson = Record<string, number[]>;
 
+export interface StepImpulse {
+  timeMs: number[];
+  impulse: number[];
+  step: number[];
+}
+
 export interface SpeakerData {
   id: string;
   name: string;
@@ -27,6 +33,7 @@ export interface SpeakerData {
   cea2034?: CurveSet;
   horizontal?: PlaneJson;
   vertical?: PlaneJson;
+  stepImpulse?: StepImpulse;
 }
 
 export interface SpeakerIndexEntry {
@@ -38,6 +45,7 @@ export interface SpeakerIndexEntry {
     inRoom: boolean;
     sweetSpot: boolean;
     offAxis: boolean;
+    step: boolean;
   };
 }
 

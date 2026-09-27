@@ -7,6 +7,7 @@ import type { SmoothingMode } from '../core/smoothing';
 import { smoothing, ySpanDb, zoomPreset, xRange, ZOOM_RANGES, type YSpanDb, type ZoomPreset } from './settings';
 import { activeSpeakerId, referenceSpeakerId, recentSpeakerIds, selectedSpeakerIds } from './speakers';
 import { currentTab, type ViewId, ALL_VIEWS } from './ui';
+import { offAxisAngleDeg, offAxisPlane } from './offaxis';
 
 const PREFS_KEY = 'spin:prefs';
 const RECENT_LIMIT = 8;
@@ -105,6 +106,12 @@ export function decodeHashToState(): void {
 
     const sm = params.get('sm');
     if (sm) smoothing.value = decodeSmoothing(sm);
+
+    const plane = params.get('plane');
+    if (plane === 'horizontal' || plane === 'vertical') offAxisPlane.value = plane;
+
+    const angle = params.get('angle');
+    if (angle && Number.isFinite(Number(angle))) offAxisAngleDeg.value = Number(angle);
   } finally {
     applyingHash = false;
   }
@@ -129,6 +136,8 @@ function buildHash(): string {
   params.set('z', `${xRange.value[0]}-${xRange.value[1]}`);
   params.set('y', String(ySpanDb.value));
   params.set('sm', encodeSmoothing(smoothing.value));
+  params.set('plane', offAxisPlane.value);
+  params.set('angle', String(offAxisAngleDeg.value));
   return `#${params.toString()}`;
 }
 
@@ -146,15 +155,17 @@ export function startHashSync(): void {
     void currentTab.value;
     void ySpanDb.value;
     void smoothing.value;
+    void offAxisPlane.value;
     if (applyingHash) return;
     const hash = buildHash();
     if (hash !== location.hash) history.pushState(null, '', hash);
   });
 
-  // Continuous zoom/pan -> replace, debounced, so dragging doesn't flood
-  // history.
+  // Continuous zoom/pan/scrub -> replace, debounced, so dragging doesn't
+  // flood history.
   effect(() => {
     void xRange.value;
+    void offAxisAngleDeg.value;
     if (applyingHash) return;
     if (xRangeDebounce) clearTimeout(xRangeDebounce);
     xRangeDebounce = setTimeout(() => {

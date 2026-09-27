@@ -11,6 +11,7 @@ import { buildLogGrid } from '../src/core/grid.ts';
 import { resampleToGrid } from '../src/core/resample.ts';
 import { computeCea2034, type Plane } from '../src/core/cea2034.ts';
 import { listeningWindowOffsetDb } from '../src/core/normalize.ts';
+import { computeMinPhase } from '../src/core/minphase.ts';
 import type { SpeakerData, DataIndex, SpeakerIndexEntry, PlaneJson } from '../src/core/types.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -37,6 +38,10 @@ function round2(x: number): number {
 
 function roundCurve(xs: number[]): number[] {
   return xs.map(round2);
+}
+
+function round6(x: number): number {
+  return Math.round(x * 1e6) / 1e6;
 }
 
 interface NativePlane {
@@ -101,6 +106,9 @@ function buildSpeaker(spec: SpeakerSpec): SpeakerData {
 
   const license = existsSync(licensePath) ? readFileSync(licensePath, 'utf-8').trim() : '';
 
+  const normalizedOnAxis = spin.onAxis.map((v2) => v2 - offsetDb);
+  const minPhase = computeMinPhase(GRID, normalizedOnAxis);
+
   const data: SpeakerData = {
     id: spec.id,
     name: spec.name,
@@ -109,7 +117,7 @@ function buildSpeaker(spec: SpeakerSpec): SpeakerData {
     freqHz: roundCurve(GRID),
     cea2034: {
       freqHz: roundCurve(GRID),
-      onAxis: roundCurve(spin.onAxis.map((v2) => v2 - offsetDb)),
+      onAxis: roundCurve(normalizedOnAxis),
       listeningWindow: roundCurve(spin.listeningWindow.map((v2) => v2 - offsetDb)),
       earlyReflections: roundCurve(spin.earlyReflections.map((v2) => v2 - offsetDb)),
       soundPower: roundCurve(spin.soundPower.map((v2) => v2 - offsetDb)),
@@ -119,6 +127,11 @@ function buildSpeaker(spec: SpeakerSpec): SpeakerData {
     },
     horizontal: shiftPlane(h, offsetDb),
     vertical: shiftPlane(v, offsetDb),
+    stepImpulse: {
+      timeMs: minPhase.timeMs.map((t) => Math.round(t * 1000) / 1000),
+      impulse: minPhase.impulse.map(round6),
+      step: minPhase.step.map(round6),
+    },
   };
 
   return data;
@@ -143,6 +156,7 @@ function main(): void {
         inRoom: !!data.cea2034?.estimatedInRoom,
         sweetSpot: !!(data.horizontal && data.vertical),
         offAxis: !!(data.horizontal && data.vertical),
+        step: !!data.stepImpulse,
       },
     };
     index.speakers.push(entry);

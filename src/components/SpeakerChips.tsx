@@ -1,6 +1,7 @@
 import { useRef } from 'preact/hooks';
 import { activeSpeakerId, referenceSpeakerId, selectedSpeakerIds, speakerIndex } from '../state/speakers';
 import { pickerOpen } from '../state/ui';
+import { blindLetters, blindMode, disableBlindMode, enableBlindMode, pickActiveSpeaker, pickedSpeakerId, revealed } from '../state/blind';
 
 const HOLD_MS = 250;
 
@@ -33,16 +34,26 @@ function Chip({ id }: { id: string }) {
     }
   }
 
+  let label: string;
+  if (blindMode.value) {
+    const letter = blindLetters.value[id] ?? '?';
+    label = revealed.value ? `${letter}: ${entry?.name ?? id}` : letter;
+  } else {
+    label = entry?.name ?? id;
+  }
+
+  const isPicked = revealed.value && pickedSpeakerId.value === id;
+
   return (
     <button
       type="button"
-      class={`chip${isActive ? ' chip--active' : ''}${isReference ? ' chip--reference' : ''}`}
+      class={`chip${isActive ? ' chip--active' : ''}${isReference ? ' chip--reference' : ''}${isPicked ? ' chip--picked' : ''}`}
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
       onPointerLeave={clearTimer}
       onPointerCancel={clearTimer}
     >
-      {entry?.name ?? id}
+      {label}
     </button>
   );
 }
@@ -54,7 +65,7 @@ export function SpeakerChips() {
       {ids.map((id) => (
         <Chip key={id} id={id} />
       ))}
-      {ids.length < 4 && (
+      {ids.length < 4 && !blindMode.value && (
         <button
           type="button"
           class="chip chip--add"
@@ -64,6 +75,25 @@ export function SpeakerChips() {
           }}
         >
           +
+        </button>
+      )}
+      <button
+        type="button"
+        class={`chip chip--blind${blindMode.value ? ' chip--active' : ''}`}
+        onClick={() => {
+          if (blindMode.value) disableBlindMode();
+          else enableBlindMode();
+        }}
+      >
+        Blind
+      </button>
+      {blindMode.value && !revealed.value && (
+        <button
+          type="button"
+          class="chip chip--pick"
+          onClick={() => pickActiveSpeaker(activeSpeakerId.value)}
+        >
+          Pick
         </button>
       )}
     </div>

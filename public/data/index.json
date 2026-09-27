@@ -8,7 +8,8 @@
         "cea2034": true,
         "inRoom": true,
         "sweetSpot": true,
-        "offAxis": true
+        "offAxis": true,
+        "step": true
       }
     },
     {
@@ -19,7 +20,8 @@
         "cea2034": true,
         "inRoom": true,
         "sweetSpot": true,
-        "offAxis": true
+        "offAxis": true,
+        "step": true
       }
     },
     {
@@ -30,7 +32,8 @@
         "cea2034": true,
         "inRoom": true,
         "sweetSpot": true,
-        "offAxis": true
+        "offAxis": true,
+        "step": true
       }
     }
   ]

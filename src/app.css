@@ -59,6 +59,20 @@
   font-weight: 700;
 }
 
+.chip--blind {
+  font-variant: small-caps;
+}
+
+.chip--pick {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.chip--picked {
+  box-shadow: 0 0 0 2px #2ca02c inset;
+}
+
 /* 2. View tabs */
 .tabs-row {
   position: sticky;
@@ -324,14 +338,64 @@
   white-space: nowrap;
 }
 
-/* Landscape phone: charts take over, controls hide (Milestone 4 will refine) */
+/* Step / impulse */
+.step-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.step-view__label {
+  margin: 6px 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* Landscape phone: the plot fills the screen, everything else not needed
+ * to read it collapses out of the way. */
 @media (max-width: 900px) and (orientation: landscape) {
-  .controls,
+  .app {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .app-header,
   .cursor-readout,
-  .app-header {
+  .controls,
+  .sweetspot-note,
+  .offaxis-view__toolbar,
+  .step-view__label {
     display: none;
   }
-  .plot-host {
-    height: 80dvh;
+
+  .chip-row {
+    padding: 4px 12px;
+  }
+
+  .tabs-with-settings {
+    top: 0;
+  }
+
+  .plot-host,
+  .offaxis-view,
+  .step-view {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .offaxis-heatmap {
+    flex: 0 0 35%;
+    height: auto;
+  }
+
+  .offaxis-curve {
+    flex: 1 1 auto;
+    height: auto;
+  }
+
+  .offaxis-view__slider {
+    flex: 0 0 auto;
   }
 }

@@ -22,6 +22,8 @@ function createController(view: ViewId, container: HTMLElement): ChartController
       return new SweetSpotController(container);
     case 'offaxis':
       throw new Error('offaxis has its own OffAxisView, not PlotView');
+    case 'step':
+      throw new Error('step has its own StepImpulseView, not PlotView');
   }
 }
 
