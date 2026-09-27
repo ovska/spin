@@ -1,7 +1,9 @@
 import type { SmoothingMode } from '../core/smoothing';
 import { smoothing, xRange, ySpanDb, zoomPreset, ZOOM_RANGES, type YSpanDb, type ZoomPreset } from '../state/settings';
+import { CycleButton, type CycleOption } from './CycleButton';
+import { SmoothIcon, RangeIcon, SpanIcon } from './icons';
 
-const SMOOTHING_OPTIONS: { value: SmoothingMode; label: string }[] = [
+const SMOOTHING_OPTIONS: CycleOption<SmoothingMode>[] = [
   { value: 'none', label: 'None' },
   { value: '1/12', label: '1/12' },
   { value: '1/6', label: '1/6' },
@@ -9,60 +11,51 @@ const SMOOTHING_OPTIONS: { value: SmoothingMode; label: string }[] = [
   { value: 'erb', label: 'ERB' },
 ];
 
-const ZOOM_OPTIONS: { value: ZoomPreset; label: string }[] = [
+const ZOOM_OPTIONS: CycleOption<ZoomPreset>[] = [
   { value: 'full', label: 'Full' },
   { value: 'bass', label: 'Bass' },
   { value: 'crossover', label: 'Crossover' },
   { value: 'treble', label: 'Treble' },
 ];
 
-const YSPAN_OPTIONS: YSpanDb[] = [5, 10, 25];
+const YSPAN_OPTIONS: CycleOption<YSpanDb>[] = [
+  { value: 5, label: '±5' },
+  { value: 10, label: '±10' },
+  { value: 25, label: '±25' },
+];
 
 export function Controls() {
   return (
     <div class="controls">
-      <div class="controls__group" role="group" aria-label="Smoothing">
-        {SMOOTHING_OPTIONS.map((opt) => (
-          <button
-            key={opt.value}
-            type="button"
-            class={`chip-btn${smoothing.value === opt.value ? ' chip-btn--active' : ''}`}
-            onClick={() => {
-              smoothing.value = opt.value;
-            }}
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
-      <div class="controls__group" role="group" aria-label="Zoom">
-        {ZOOM_OPTIONS.map((opt) => (
-          <button
-            key={opt.value}
-            type="button"
-            class={`chip-btn${zoomPreset.value === opt.value ? ' chip-btn--active' : ''}`}
-            onClick={() => {
-              zoomPreset.value = opt.value;
-              xRange.value = ZOOM_RANGES[opt.value];
-            }}
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
-      <div class="controls__group" role="group" aria-label="Y span">
-        {YSPAN_OPTIONS.map((span) => (
-          <button
-            key={span}
-            type="button"
-            class={`chip-btn${ySpanDb.value === span ? ' chip-btn--active' : ''}`}
-            onClick={() => {
-              ySpanDb.value = span;
-            }}
-          >
-            ±{span}
-          </button>
-        ))}
+      <div class="controls__cycle-row">
+        <CycleButton
+          icon={<SmoothIcon />}
+          groupLabel="Smooth"
+          options={SMOOTHING_OPTIONS}
+          value={smoothing.value}
+          onChange={(v) => {
+            smoothing.value = v;
+          }}
+        />
+        <CycleButton
+          icon={<RangeIcon />}
+          groupLabel="Range"
+          options={ZOOM_OPTIONS}
+          value={zoomPreset.value}
+          onChange={(v) => {
+            zoomPreset.value = v;
+            xRange.value = ZOOM_RANGES[v];
+          }}
+        />
+        <CycleButton
+          icon={<SpanIcon />}
+          groupLabel="Span"
+          options={YSPAN_OPTIONS}
+          value={ySpanDb.value}
+          onChange={(v) => {
+            ySpanDb.value = v;
+          }}
+        />
       </div>
     </div>
   );

@@ -134,51 +134,53 @@ export function OffAxisView() {
 
   return (
     <div class="offaxis-view">
-      <div class="offaxis-view__toolbar">
-        <button
-          type="button"
-          class={`chip-btn${plane === 'horizontal' ? ' chip-btn--active' : ''}`}
-          onClick={() => {
-            offAxisPlane.value = 'horizontal';
-            offAxisAngleDeg.value = 0;
-          }}
-        >
-          Horizontal
-        </button>
-        <button
-          type="button"
-          class={`chip-btn${plane === 'vertical' ? ' chip-btn--active' : ''}`}
-          onClick={() => {
-            offAxisPlane.value = 'vertical';
-            offAxisAngleDeg.value = 0;
-          }}
-        >
-          Vertical
-        </button>
+      <div class="offaxis-view__controls-row">
+        <div class="offaxis-view__toolbar">
+          <button
+            type="button"
+            class={`chip-btn${plane === 'horizontal' ? ' chip-btn--active' : ''}`}
+            onClick={() => {
+              offAxisPlane.value = 'horizontal';
+              offAxisAngleDeg.value = 0;
+            }}
+          >
+            Horizontal
+          </button>
+          <button
+            type="button"
+            class={`chip-btn${plane === 'vertical' ? ' chip-btn--active' : ''}`}
+            onClick={() => {
+              offAxisPlane.value = 'vertical';
+              offAxisAngleDeg.value = 0;
+            }}
+          >
+            Vertical
+          </button>
+        </div>
+        <div class="offaxis-view__slider">
+          <input
+            type="range"
+            min={angMin}
+            max={angMax}
+            step={1}
+            value={angle}
+            list="offaxis-measured-angles"
+            onInput={(e) => {
+              offAxisAngleDeg.value = Number((e.target as HTMLInputElement).value);
+            }}
+          />
+          {/* Tick marks at the actual measured angles (every 10°) - the rest
+           * of the range is PCHIP-interpolated between them, see offAxisTable.ts. */}
+          <datalist id="offaxis-measured-angles">
+            {measuredAngles.map((deg) => (
+              <option key={deg} value={deg} />
+            ))}
+          </datalist>
+          <span class="offaxis-view__angle-label">{angle}°</span>
+        </div>
       </div>
       <div ref={heatmapRef} class="plot-host offaxis-heatmap" />
       <div ref={curveRef} class="plot-host offaxis-curve" />
-      <div class="offaxis-view__slider">
-        <input
-          type="range"
-          min={angMin}
-          max={angMax}
-          step={1}
-          value={angle}
-          list="offaxis-measured-angles"
-          onInput={(e) => {
-            offAxisAngleDeg.value = Number((e.target as HTMLInputElement).value);
-          }}
-        />
-        {/* Tick marks at the actual measured angles (every 10°) - the rest
-         * of the range is PCHIP-interpolated between them, see offAxisTable.ts. */}
-        <datalist id="offaxis-measured-angles">
-          {measuredAngles.map((deg) => (
-            <option key={deg} value={deg} />
-          ))}
-        </datalist>
-        <span class="offaxis-view__angle-label">{angle}°</span>
-      </div>
     </div>
   );
 }

@@ -166,6 +166,52 @@
   color: var(--accent-contrast);
 }
 
+.controls__cycle-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.cycle-btn {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  color: var(--text);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.cycle-btn svg {
+  flex: 0 0 auto;
+  color: var(--text-dim);
+}
+
+.cycle-btn__track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--border);
+}
+
+.cycle-btn__fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--accent);
+}
+
 /* Sheets (picker, about) */
 .sheet-backdrop {
   position: fixed;
@@ -311,10 +357,17 @@
   flex-direction: column;
 }
 
+.offaxis-view__controls-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+}
+
 .offaxis-view__toolbar {
   display: flex;
   gap: 6px;
-  padding: 6px 12px;
+  flex: 0 0 auto;
 }
 
 .offaxis-heatmap {
@@ -328,12 +381,14 @@
 .offaxis-view__slider {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 12px;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .offaxis-view__slider input[type='range'] {
   flex: 1;
+  min-width: 0;
 }
 
 .offaxis-view__angle-label {
