@@ -12,6 +12,7 @@ import { Controls } from './components/Controls';
 import { AboutSheet } from './components/AboutSheet';
 import { SweetSpotSettingsSheet } from './components/SweetSpotSettingsSheet';
 import { ThemeToggle } from './components/ThemeToggle';
+import { GearIcon } from './components/icons';
 import './app.css';
 
 const DEFAULT_SPEAKER_IDS = ['kef-r3', 'genelec-8030c', 'neumann-kh-120-ii'];
@@ -88,7 +89,7 @@ export function App() {
               settingsOpen.value = true;
             }}
           >
-            ⚙
+            <GearIcon />
           </button>
         )}
       </div>

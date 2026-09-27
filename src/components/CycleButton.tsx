@@ -25,6 +25,11 @@ export function CycleButton<T>({ icon, groupLabel, options, value, onChange }: P
   );
   const current = options[index];
   const segWidth = 100 / options.length;
+  // Reserve width for the longest possible label up front (in `ch`, i.e.
+  // roughly one digit-width per character) so cycling through options of
+  // different lengths ("Range: Full" -> "Range: Crossover") never resizes
+  // the button.
+  const widestChars = Math.max(...options.map((o) => `${groupLabel}: ${o.label}`.length));
 
   function cycle(): void {
     onChange(options[(index + 1) % options.length].value);
@@ -38,7 +43,7 @@ export function CycleButton<T>({ icon, groupLabel, options, value, onChange }: P
       aria-label={`${groupLabel}: ${current.label} (tap to change, ${index + 1} of ${options.length})`}
     >
       {icon}
-      <span>
+      <span class="cycle-btn__label" style={{ minWidth: `${widestChars}ch` }}>
         {groupLabel}: {current.label}
       </span>
       <span class="cycle-btn__track">

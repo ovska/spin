@@ -1,5 +1,5 @@
 import { useRef } from 'preact/hooks';
-import { activeSpeakerId, referenceSpeakerId, selectedSpeakerIds, speakerIndex } from '../state/speakers';
+import { activeSpeakerId, referenceSpeakerId, removeSpeaker, selectedSpeakerIds, speakerIndex } from '../state/speakers';
 import { pickerOpen } from '../state/ui';
 import { blindLetters, blindMode, disableBlindMode, enableBlindMode, pickActiveSpeaker, pickedSpeakerId, revealed } from '../state/blind';
 
@@ -45,16 +45,28 @@ function Chip({ id }: { id: string }) {
   const isPicked = revealed.value && pickedSpeakerId.value === id;
 
   return (
-    <button
-      type="button"
-      class={`chip${isActive ? ' chip--active' : ''}${isReference ? ' chip--reference' : ''}${isPicked ? ' chip--picked' : ''}`}
-      onPointerDown={onPointerDown}
-      onPointerUp={onPointerUp}
-      onPointerLeave={clearTimer}
-      onPointerCancel={clearTimer}
-    >
-      {label}
-    </button>
+    <span class={`chip${isActive ? ' chip--active' : ''}${isReference ? ' chip--reference' : ''}${isPicked ? ' chip--picked' : ''}`}>
+      <button
+        type="button"
+        class="chip__body"
+        onPointerDown={onPointerDown}
+        onPointerUp={onPointerUp}
+        onPointerLeave={clearTimer}
+        onPointerCancel={clearTimer}
+      >
+        {label}
+      </button>
+      {!blindMode.value && (
+        <button
+          type="button"
+          class="chip__remove"
+          aria-label={`Remove ${entry?.name ?? id}`}
+          onClick={() => removeSpeaker(id)}
+        >
+          ×
+        </button>
+      )}
+    </span>
   );
 }
 

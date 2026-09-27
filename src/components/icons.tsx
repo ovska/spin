@@ -35,3 +35,23 @@ export function SpanIcon() {
     </svg>
   );
 }
+
+/** A "sliders" glyph rather than a literal gear - simpler to render crisply
+ * at 16px and just as recognizable for "settings". The knob fill matches
+ * the page background (its only usage site) to punch a gap in each line. */
+export function GearIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+      <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <line x1="2" y1="4" x2="14" y2="4" />
+        <line x1="2" y1="8" x2="14" y2="8" />
+        <line x1="2" y1="12" x2="14" y2="12" />
+      </g>
+      <g fill="var(--bg)" stroke="currentColor" stroke-width="1.5">
+        <circle cx="6" cy="4" r="1.75" />
+        <circle cx="10" cy="8" r="1.75" />
+        <circle cx="6" cy="12" r="1.75" />
+      </g>
+    </svg>
+  );
+}

@@ -14,7 +14,7 @@ const SMOOTHING_OPTIONS: CycleOption<SmoothingMode>[] = [
 const ZOOM_OPTIONS: CycleOption<ZoomPreset>[] = [
   { value: 'full', label: 'Full' },
   { value: 'bass', label: 'Bass' },
-  { value: 'crossover', label: 'Crossover' },
+  { value: 'crossover', label: 'Xover' },
   { value: 'treble', label: 'Treble' },
 ];
 

@@ -52,6 +52,8 @@
 
 .chip {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
   padding: 5px 10px;
   border-radius: 6px;
   border: 1px solid var(--border);
@@ -63,6 +65,22 @@
   user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+}
+
+.chip__body {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.chip__remove {
+  border: none;
+  background: none;
+  padding: 4px;
+  margin: -4px -4px -4px 2px;
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.55;
 }
 
 .chip--active {
@@ -168,6 +186,7 @@
 
 .controls__cycle-row {
   display: flex;
+  justify-content: flex-end;
   gap: 6px;
   overflow-x: auto;
 }
@@ -177,13 +196,13 @@
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 6px 10px 8px;
+  gap: 4px;
+  padding: 5px 8px 7px;
   border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--bg-raised);
   color: var(--text);
-  font-size: 13px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   user-select: none;
@@ -194,6 +213,11 @@
 .cycle-btn svg {
   flex: 0 0 auto;
   color: var(--text-dim);
+}
+
+.cycle-btn__label {
+  display: inline-block;
+  text-align: left;
 }
 
 .cycle-btn__track {
@@ -302,10 +326,13 @@
 
 .tabs-with-settings__gear {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
   border: none;
   background: none;
-  font-size: 16px;
+  color: var(--text-dim);
 }
 
 .sweetspot-note {

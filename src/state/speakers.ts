@@ -23,3 +23,15 @@ export function visibleSpeakerId(): string | null {
   if (peeking.value && referenceSpeakerId.value) return referenceSpeakerId.value;
   return activeSpeakerId.value;
 }
+
+/** Drops a speaker from the working set (chip row), reassigning
+ * active/reference off it if either pointed there - the only way to free a
+ * slot once all 4 are filled, since the picker only adds. */
+export function removeSpeaker(id: string): void {
+  const next = selectedSpeakerIds.value.filter((x) => x !== id);
+  selectedSpeakerIds.value = next;
+  if (activeSpeakerId.value === id) activeSpeakerId.value = next[0] ?? null;
+  if (referenceSpeakerId.value === id) {
+    referenceSpeakerId.value = next.find((x) => x !== activeSpeakerId.value) ?? null;
+  }
+}
