@@ -13,9 +13,11 @@ const SMOOTHING_OPTIONS: CycleOption<SmoothingMode>[] = [
 
 const ZOOM_OPTIONS: CycleOption<ZoomPreset>[] = [
   { value: 'full', label: 'Full' },
+  { value: 'low', label: 'Low' },
   { value: 'bass', label: 'Bass' },
   { value: 'crossover', label: 'Mid' },
   { value: 'treble', label: 'Treble' },
+  { value: 'high', label: 'High' },
 ];
 
 const YSPAN_OPTIONS: CycleOption<YSpanDb>[] = [
