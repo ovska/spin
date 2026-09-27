@@ -54,14 +54,15 @@ export class OffAxisCurveController extends ChartController {
       if (!plot) continue;
       const table = getOffAxisTable(data, this.currentSmoothing);
       const rows = this.plane === 'horizontal' ? table.horizontal : table.vertical;
-      plot.setData([table.freqHz, table.onAxis, rowForAngle(rows, deg)]);
+      // false: preserve the user's current zoom/pan - see ChartController.applySmoothing.
+      plot.setData([table.freqHz, table.onAxis, rowForAngle(rows, deg)], false);
     }
   }
 
   private refreshAll(): void {
     for (const [id, data] of this.getAllRawData()) {
       const plot = this.getPlot(id);
-      if (plot) plot.setData(this.buildData(data, this.currentSmoothing));
+      if (plot) plot.setData(this.buildData(data, this.currentSmoothing), false);
     }
   }
 

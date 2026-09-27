@@ -198,9 +198,19 @@
 
 .controls__cycle-row {
   display: flex;
-  justify-content: flex-end;
   gap: 6px;
   overflow-x: auto;
+}
+
+/* Push the group as a whole to the right when it fits, same visual result
+ * as justify-content: flex-end, but falls back cleanly to normal
+ * start-anchored scrolling if it doesn't - flex-end clips the start of an
+ * overflowing scrollable flex row on iOS Safari, with no way to scroll to
+ * reveal it (a WebKit bug: the negative-direction overflow isn't included
+ * in the scrollable area). auto margins collapse to 0 once there's no
+ * spare space to distribute, so this can't clip anything. */
+.controls__cycle-row > .cycle-btn:first-child {
+  margin-left: auto;
 }
 
 .cycle-btn {

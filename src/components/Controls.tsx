@@ -1,5 +1,5 @@
 import type { SmoothingMode } from '../core/smoothing';
-import { smoothing, xRange, ySpanDb, zoomPreset, ZOOM_RANGES, type YSpanDb, type ZoomPreset } from '../state/settings';
+import { isZoomCustom, smoothing, xRange, ySpanDb, zoomPreset, ZOOM_RANGES, type YSpanDb, type ZoomPreset } from '../state/settings';
 import { CycleButton, type CycleOption } from './CycleButton';
 import { SmoothIcon, RangeIcon, SpanIcon } from './icons';
 
@@ -49,6 +49,7 @@ export function Controls() {
           groupLabel="Range"
           options={ZOOM_OPTIONS}
           value={zoomPreset.value}
+          custom={isZoomCustom.value}
           onChange={(v) => {
             zoomPreset.value = v;
             xRange.value = ZOOM_RANGES[v];

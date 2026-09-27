@@ -1,4 +1,4 @@
-import { signal } from '@preact/signals';
+import { computed, signal } from '@preact/signals';
 import type { SmoothingMode } from '../core/smoothing';
 
 export type ZoomPreset = 'full' | 'low' | 'bass' | 'crossover' | 'treble' | 'high';
@@ -20,4 +20,15 @@ export const ySpanDb = signal<YSpanDb>(10);
 /** The actual visible x range, in Hz. Diverges from `zoomPreset`'s range as
  * soon as the user drags or pinch-zooms; a preset tap snaps back to it. */
 export const xRange = signal<[number, number]>(ZOOM_RANGES.full);
+
+/** True once a drag/pinch has moved the view away from the last-tapped
+ * preset. A `computed` (not read xRange.value directly in a component) so
+ * the Range button only re-renders when this actually flips, not on every
+ * pointermove of a drag - xRange itself is exactly the kind of
+ * high-frequency state the chart components avoid re-rendering on. */
+export const isZoomCustom = computed(() => {
+  const [lo, hi] = xRange.value;
+  const [presetLo, presetHi] = ZOOM_RANGES[zoomPreset.value];
+  return lo !== presetLo || hi !== presetHi;
+});
 
