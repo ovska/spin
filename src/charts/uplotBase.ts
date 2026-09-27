@@ -1,6 +1,7 @@
 import uPlot from 'uplot';
 import { AXIS_COLOR, GRID_COLOR } from './palette';
 import { GRID_FMIN, GRID_FMAX } from '../core/grid';
+import { xRange } from '../state/settings';
 
 // Every integer multiple of a power of ten within the domain (20, 30, ...,
 // 90, 100, 200, ..., 900, 1000, ...) - a full decade grid, not just the
@@ -48,12 +49,20 @@ export function baseOptions(width: number, height: number): Partial<uPlot.Option
       // uPlot re-invokes range() for the x-scale on every commit (not just
       // the first auto-scale), passing the scale's current min/max as
       // initMin/initMax - so a range fn that ignores those args and always
-      // returns a fixed pair (needed to stop log-scale auto-ranging from
-      // snapping 20000 up to the next decade, 100000) also stomps every
-      // explicit u.setScale('x', ...) call a moment after it lands. Passing
-      // initMin/initMax back through once they're non-null keeps the fixed
-      // default for the very first auto-scale while still letting zoom/pan
-      // stick.
+      // returns a fixed pair also stomps every explicit u.setScale('x', ...)
+      // call a moment after it lands. Passing initMin/initMax back through
+      // once they're non-null lets zoom/pan stick.
+      //
+      // The very first auto-scale (initMin == null) reads the live xRange
+      // signal instead of a hardcoded default: a brand-new uPlot instance's
+      // own first-ready pass runs asynchronously and can win the race
+      // against the setXRange() effect that's supposed to correct it
+      // afterwards (confirmed by tracing - switching tabs recreates each
+      // view's chart from scratch, and the newly-created chart would flash
+      // to full range before/instead of picking up the shared zoom, even
+      // though the effect did fire with the right value). Reading the
+      // signal here means the very first auto-scale is already correct, no
+      // race to lose.
       //
       // auto: false matters just as much as that passthrough: since range
       // is a function (not a literal array), uPlot's default would treat
@@ -67,7 +76,7 @@ export function baseOptions(width: number, height: number): Partial<uPlot.Option
         time: false,
         distr: 3,
         auto: false,
-        range: (_u, initMin, initMax) => (initMin == null ? [20, 20000] : [initMin, initMax]),
+        range: (_u, initMin, initMax) => (initMin == null ? xRange.value : [initMin, initMax]),
       },
     },
     axes: [

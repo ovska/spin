@@ -59,6 +59,10 @@ export function AboutSheet() {
             {linkify(active.license || 'No license or attribution text was recorded for this measurement.')}
           </p>
         )}
+        <p class="sheet-note">
+          Keyboard: 1-9 jumps to a chip, ← → cycles between them, Q W E R jumps between Sweet spot/CEA2034/In-room/
+          Off-axis.
+        </p>
         <button type="button" class="sheet-close" onClick={close}>
           Close
         </button>

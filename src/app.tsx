@@ -2,7 +2,7 @@ import { useEffect } from 'preact/hooks';
 import { ensureSpeakerLoaded, loadSpeakerIndex } from './data/api';
 import { decodeHashToState, loadPrefs, noteRecentSpeaker, startHashSync, startPrefsPersistence } from './state/persistence';
 import { activeSpeakerId, referenceSpeakerId, selectedSpeakerIds, speakerIndex } from './state/speakers';
-import { currentTab, aboutOpen, settingsOpen } from './state/ui';
+import { currentTab, aboutOpen, settingsOpen, type ViewId } from './state/ui';
 import { SpeakerChips } from './components/SpeakerChips';
 import { SpeakerPicker } from './components/SpeakerPicker';
 import { ViewTabs } from './components/ViewTabs';
@@ -17,14 +17,38 @@ import './app.css';
 
 const DEFAULT_SPEAKER_IDS = ['kef-r3', 'genelec-8030c', 'neumann-kh-120-ii'];
 
-function handleArrowKeys(e: KeyboardEvent): void {
-  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-  const ids = selectedSpeakerIds.value;
-  if (ids.length < 2) return;
-  const idx = ids.indexOf(activeSpeakerId.value ?? '');
-  if (idx === -1) return;
-  const next = e.key === 'ArrowRight' ? (idx + 1) % ids.length : (idx - 1 + ids.length) % ids.length;
-  activeSpeakerId.value = ids[next];
+// Desktop-only quick-select: number keys jump straight to the Nth selected
+// speaker (chip order), QWER jumps straight to a tab, in the same
+// left-to-right order they're displayed in.
+const TAB_KEYS: Record<string, ViewId> = { q: 'sweetspot', w: 'cea2034', e: 'inroom', r: 'offaxis' };
+
+function isTypingTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  return target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.isContentEditable;
+}
+
+function handleKeyboardShortcuts(e: KeyboardEvent): void {
+  if (e.ctrlKey || e.metaKey || e.altKey || isTypingTarget(e.target)) return;
+
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    const ids = selectedSpeakerIds.value;
+    if (ids.length < 2) return;
+    const idx = ids.indexOf(activeSpeakerId.value ?? '');
+    if (idx === -1) return;
+    const next = e.key === 'ArrowRight' ? (idx + 1) % ids.length : (idx - 1 + ids.length) % ids.length;
+    activeSpeakerId.value = ids[next];
+    return;
+  }
+
+  if (e.key >= '1' && e.key <= '9') {
+    const ids = selectedSpeakerIds.value;
+    const idx = Number(e.key) - 1;
+    if (idx < ids.length) activeSpeakerId.value = ids[idx];
+    return;
+  }
+
+  const tab = TAB_KEYS[e.key.toLowerCase()];
+  if (tab) currentTab.value = tab;
 }
 
 export function App() {
@@ -53,8 +77,8 @@ export function App() {
       }
     });
 
-    window.addEventListener('keydown', handleArrowKeys);
-    return () => window.removeEventListener('keydown', handleArrowKeys);
+    window.addEventListener('keydown', handleKeyboardShortcuts);
+    return () => window.removeEventListener('keydown', handleKeyboardShortcuts);
   }, []);
 
   const tab = currentTab.value;
