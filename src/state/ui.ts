@@ -16,3 +16,6 @@ export const currentTab = signal<ViewId>('cea2034');
 export const pickerOpen = signal(false);
 export const settingsOpen = signal(false);
 export const aboutOpen = signal(false);
+
+export type PickerSortMode = 'recent' | 'alphabetical' | 'prefScore' | 'lowEndExtension' | 'smoothness';
+export const pickerSortMode = signal<PickerSortMode>('recent');

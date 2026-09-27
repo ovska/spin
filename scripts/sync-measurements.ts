@@ -157,6 +157,8 @@ function processCatalog(repoDir: string, entries: CatalogEntry[]): SyncResult {
       asrDir,
       id: entry.id,
       name: entry.name,
+      brand: entry.brand ?? '',
+      model: entry.model ?? entry.name,
       origin: entry.originDisplayName,
       licenseFallback,
     };

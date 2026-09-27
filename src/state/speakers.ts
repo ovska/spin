@@ -17,6 +17,13 @@ export const speakerDataCache = signal<Record<string, SpeakerDataState>>({});
 
 export const recentSpeakerIds = signal<string[]>([]);
 
+export const favoriteSpeakerIds = signal<string[]>([]);
+
+export function toggleFavorite(id: string): void {
+  const current = favoriteSpeakerIds.value;
+  favoriteSpeakerIds.value = current.includes(id) ? current.filter((x) => x !== id) : [...current, id];
+}
+
 /** The speaker id whose data should currently be shown on charts: the
  * reference while peeking, otherwise the active speaker. */
 export function visibleSpeakerId(): string | null {

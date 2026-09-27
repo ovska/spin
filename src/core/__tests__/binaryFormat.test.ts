@@ -12,6 +12,8 @@ function toArrayBuffer(u8: Uint8Array): ArrayBuffer {
 const sample: SpeakerData = {
   id: 'test-speaker',
   name: 'Test Speaker',
+  brand: 'Test',
+  model: 'Speaker',
   origin: 'ASR',
   license: 'CC BY-NC-SA 4.0',
   freqHz: [20, 200, 2000, 20000],
@@ -67,6 +69,8 @@ describe('binaryFormat', () => {
     const minimal: SpeakerData = {
       id: 'bare',
       name: 'Bare Speaker',
+      brand: 'Bare',
+      model: 'Speaker',
       origin: 'ASR',
       license: '',
       freqHz: [20, 20000],

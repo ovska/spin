@@ -64,9 +64,11 @@ export function App() {
       <header class="app-header">
         <span class="app-header__brand">
           <img class="app-header__logo" src={`${import.meta.env.BASE_URL}logo-192.png`} alt="" width="24" height="24" />
-          <span class="app-header__title">Spin</span>
-          <span class="app-header__version">
-            {__APP_VERSION__} · {speakerIndex.value.length} speakers
+          <span class="app-header__text">
+            <span class="app-header__title">Spin</span>
+            <span class="app-header__version">
+              {__APP_VERSION__} · {speakerIndex.value.length} speakers
+            </span>
           </span>
         </span>
         <div class="app-header__actions">

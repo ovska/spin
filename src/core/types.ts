@@ -21,6 +21,8 @@ export type PlaneJson = Record<string, number[]>;
 export interface SpeakerData {
   id: string;
   name: string;
+  brand: string;
+  model: string;
   origin: string;
   license: string;
   freqHz: number[];
@@ -29,10 +31,22 @@ export interface SpeakerData {
   vertical?: PlaneJson;
 }
 
+/** Preference-score-derived metrics for sorting the speaker list (see
+ * core/prefScore.ts) - absent when the measurement doesn't have what's
+ * needed to compute them (e.g. no low-frequency data). */
+export interface SpeakerMetrics {
+  prefScore: number;
+  lfxHz: number;
+  smoothness: number;
+}
+
 export interface SpeakerIndexEntry {
   id: string;
   name: string;
+  brand: string;
+  model: string;
   origin: string;
+  metrics: SpeakerMetrics | null;
   views: {
     cea2034: boolean;
     inRoom: boolean;

@@ -5,8 +5,8 @@
 import { effect } from '@preact/signals';
 import type { SmoothingMode } from '../core/smoothing';
 import { smoothing, ySpanDb, zoomPreset, xRange, ZOOM_RANGES, type YSpanDb, type ZoomPreset } from './settings';
-import { activeSpeakerId, referenceSpeakerId, recentSpeakerIds, selectedSpeakerIds } from './speakers';
-import { currentTab, type ViewId, ALL_VIEWS } from './ui';
+import { activeSpeakerId, referenceSpeakerId, recentSpeakerIds, favoriteSpeakerIds, selectedSpeakerIds } from './speakers';
+import { currentTab, type ViewId, ALL_VIEWS, pickerSortMode, type PickerSortMode } from './ui';
 import { offAxisAngleDeg, offAxisPlane } from './offaxis';
 import { applyTheme, themeMode, type ThemeMode } from './theme';
 
@@ -18,8 +18,12 @@ interface Prefs {
   ySpanDb: YSpanDb;
   zoomPreset: ZoomPreset;
   recentSpeakerIds: string[];
+  favoriteSpeakerIds: string[];
+  pickerSortMode: PickerSortMode;
   themeMode: ThemeMode;
 }
+
+const PICKER_SORT_MODES: PickerSortMode[] = ['recent', 'alphabetical', 'prefScore', 'lowEndExtension', 'smoothness'];
 
 function safeGet(key: string): string | null {
   try {
@@ -66,6 +70,8 @@ export function loadPrefs(): void {
       xRange.value = ZOOM_RANGES[prefs.zoomPreset];
     }
     if (Array.isArray(prefs.recentSpeakerIds)) recentSpeakerIds.value = prefs.recentSpeakerIds;
+    if (Array.isArray(prefs.favoriteSpeakerIds)) favoriteSpeakerIds.value = prefs.favoriteSpeakerIds;
+    if (prefs.pickerSortMode && PICKER_SORT_MODES.includes(prefs.pickerSortMode)) pickerSortMode.value = prefs.pickerSortMode;
     if (prefs.themeMode && THEME_MODES.includes(prefs.themeMode)) themeMode.value = prefs.themeMode;
   } catch {
     // corrupt prefs blob - ignore and start fresh
@@ -82,6 +88,8 @@ export function startPrefsPersistence(): void {
       ySpanDb: ySpanDb.value,
       zoomPreset: zoomPreset.value,
       recentSpeakerIds: recentSpeakerIds.value,
+      favoriteSpeakerIds: favoriteSpeakerIds.value,
+      pickerSortMode: pickerSortMode.value,
       themeMode: themeMode.value,
     };
     safeSet(PREFS_KEY, JSON.stringify(prefs));

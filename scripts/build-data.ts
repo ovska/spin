@@ -18,10 +18,10 @@ const ROOT = join(import.meta.dirname, '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
 const OUT_DIR = join(ROOT, 'public', 'data');
 
-const SPEAKERS: { dir: string; id: string; name: string }[] = [
-  { dir: 'KEF R3', id: 'kef-r3', name: 'KEF R3' },
-  { dir: 'Genelec 8030C', id: 'genelec-8030c', name: 'Genelec 8030C' },
-  { dir: 'Neumann KH 120 II', id: 'neumann-kh-120-ii', name: 'Neumann KH 120 II' },
+const SPEAKERS: { dir: string; id: string; name: string; brand: string; model: string }[] = [
+  { dir: 'KEF R3', id: 'kef-r3', name: 'KEF R3', brand: 'KEF', model: 'R3' },
+  { dir: 'Genelec 8030C', id: 'genelec-8030c', name: 'Genelec 8030C', brand: 'Genelec', model: '8030C' },
+  { dir: 'Neumann KH 120 II', id: 'neumann-kh-120-ii', name: 'Neumann KH 120 II', brand: 'Neumann', model: 'KH 120 II' },
 ];
 
 function main(): void {
@@ -35,6 +35,8 @@ function main(): void {
       asrDir: join(RAW_DIR, spec.dir, 'asr'),
       id: spec.id,
       name: spec.name,
+      brand: spec.brand,
+      model: spec.model,
       origin: 'Audio Science Review',
     };
     const data = buildSpeaker(source);

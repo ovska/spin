@@ -12,6 +12,7 @@ import { buildLogGrid } from '../../src/core/grid.ts';
 import { resampleToGrid } from '../../src/core/resample.ts';
 import { computeCea2034, type Plane } from '../../src/core/cea2034.ts';
 import { listeningWindowOffsetDb } from '../../src/core/normalize.ts';
+import { computePrefScoreMetrics } from '../../src/core/prefScore.ts';
 import type { SpeakerData, SpeakerIndexEntry, PlaneJson } from '../../src/core/types.ts';
 
 export const GRID = buildLogGrid();
@@ -64,6 +65,8 @@ export interface SpeakerSource {
   asrDir: string;
   id: string;
   name: string;
+  brand: string;
+  model: string;
   origin: string;
   /** Used verbatim as the license text when asrDir has no LICENSE.txt (e.g.
    * Erin's Audio Corner measurements, which spinorama doesn't ship a
@@ -111,6 +114,8 @@ export function buildSpeaker(spec: SpeakerSource): SpeakerData {
   return {
     id: spec.id,
     name: spec.name,
+    brand: spec.brand,
+    model: spec.model,
     origin: spec.origin,
     license,
     freqHz: roundCurve(GRID),
@@ -133,7 +138,10 @@ export function indexEntryFor(data: SpeakerData): SpeakerIndexEntry {
   return {
     id: data.id,
     name: data.name,
+    brand: data.brand,
+    model: data.model,
     origin: data.origin,
+    metrics: data.cea2034 ? computePrefScoreMetrics(data.cea2034) : null,
     views: {
       cea2034: !!data.cea2034,
       inRoom: !!data.cea2034?.estimatedInRoom,
