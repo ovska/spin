@@ -1,9 +1,12 @@
+import { useState } from 'preact/hooks';
 import { ensureSpeakerLoaded } from '../data/api';
 import { activeSpeakerId, recentSpeakerIds, selectedSpeakerIds, speakerIndex } from '../state/speakers';
 import { noteRecentSpeaker } from '../state/persistence';
 import { pickerOpen } from '../state/ui';
 
 export function SpeakerPicker() {
+  const [search, setSearch] = useState('');
+
   if (!pickerOpen.value) return null;
 
   const recent = recentSpeakerIds.value;
@@ -15,6 +18,9 @@ export function SpeakerPicker() {
     if (rb === -1) return -1;
     return ra - rb;
   });
+
+  const query = search.trim().toLowerCase();
+  const filtered = query ? ordered.filter((entry) => entry.name.toLowerCase().includes(query)) : ordered;
 
   function pick(id: string): void {
     if (!selectedSpeakerIds.value.includes(id)) {
@@ -34,8 +40,17 @@ export function SpeakerPicker() {
     <div class="sheet-backdrop" onClick={close}>
       <div class="sheet" onClick={(e) => e.stopPropagation()}>
         <h2>Choose a speaker</h2>
+        {ordered.length > 8 && (
+          <input
+            type="search"
+            class="sheet-search"
+            placeholder={`Search ${ordered.length} speakers…`}
+            value={search}
+            onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
+          />
+        )}
         <ul class="sheet-list">
-          {ordered.map((entry) => (
+          {filtered.map((entry) => (
             <li key={entry.id}>
               <button type="button" onClick={() => pick(entry.id)} disabled={selectedSpeakerIds.value.includes(entry.id)}>
                 {entry.name}
@@ -43,6 +58,7 @@ export function SpeakerPicker() {
               </button>
             </li>
           ))}
+          {filtered.length === 0 && <li class="sheet-list__empty">No speakers match "{search}".</li>}
         </ul>
         <button type="button" class="sheet-close" onClick={close}>
           Close

@@ -239,6 +239,23 @@
   color: var(--text-dim);
 }
 
+.sheet-list__empty {
+  padding: 12px 4px;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.sheet-search {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  color: var(--text);
+  font-size: 14px;
+}
+
 .sheet-close {
   margin-top: 12px;
   width: 100%;

@@ -1,8 +1,1904 @@
 {
   "speakers": [
     {
-      "id": "kef-r3",
-      "name": "KEF R3",
+      "id": "acoustic-energy-ae100-mk2",
+      "name": "Acoustic Energy AE100 Mk2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-a4v",
+      "name": "Adam A4V",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-a5x",
+      "name": "Adam A5X",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-d3v",
+      "name": "Adam D3V",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-s2v",
+      "name": "Adam S2V",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-t5v",
+      "name": "Adam T5V",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "adam-t8v",
+      "name": "Adam T8V",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "advent-the-new-advent-loudspeaker",
+      "name": "Advent The New Advent Loudspeaker",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "altec-lansing-soundrower-pro-650",
+      "name": "Altec Lansing Soundrower Pro 650",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "amazon-basic-r60btus",
+      "name": "Amazon Basic R60BTUS",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aoshida-audio-musician-knight-i-v2",
+      "name": "Aoshida Audio Musician Knight I V2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-novus-n5b",
+      "name": "Aperion Audio Novus N5B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-novus-n5c",
+      "name": "Aperion Audio Novus N5C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-novus-n5t",
+      "name": "Aperion Audio Novus N5T",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-novus-n6sr",
+      "name": "Aperion Audio Novus N6SR",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-verus-iii-concert-v6c",
+      "name": "Aperion Audio Verus III Concert V6C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "aperion-audio-verus-iii-concert-v8b",
+      "name": "Aperion Audio Verus III Concert V8B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "apple-homepod-mini",
+      "name": "Apple Homepod Mini",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1528-monitor-8",
+      "name": "Arendal Sound 1528 Monitor 8",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1723-bookshelf-s-thx",
+      "name": "Arendal Sound 1723 Bookshelf S THX",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1723-monitor-s-thx",
+      "name": "Arendal Sound 1723 Monitor S THX",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1723-monitor-thx",
+      "name": "Arendal Sound 1723 Monitor THX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1961-bookshelf",
+      "name": "Arendal Sound 1961 Bookshelf",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1961-center",
+      "name": "Arendal Sound 1961 Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1961-monitor",
+      "name": "Arendal Sound 1961 Monitor",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "arendal-sound-1961-tower",
+      "name": "Arendal Sound 1961 Tower",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-cbm-170-se",
+      "name": "Ascend Acoustics CBM-170 SE",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-cmt-340-center",
+      "name": "Ascend Acoustics CMT-340 Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-horizon-center",
+      "name": "Ascend Acoustics Horizon Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-luna-duo",
+      "name": "Ascend Acoustics Luna Duo",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-luna-mini-monitor",
+      "name": "Ascend Acoustics Luna Mini-Monitor",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascend-acoustics-sierra-2",
+      "name": "Ascend Acoustics Sierra 2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascilab-a6b-passive",
+      "name": "AsciLab A6B Passive",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascilab-c6b",
+      "name": "AsciLab C6B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascilab-c8c",
+      "name": "AsciLab C8C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascilab-f6b",
+      "name": "AsciLab F6B",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ascilab-f6bs",
+      "name": "AsciLab F6Bs",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "asr-directiva-open-source-speaker",
+      "name": "ASR Directiva Open Source Speaker",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "atc-scm19-v1",
+      "name": "ATC SCM19 v1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "atlantic-technology-8600ec-center",
+      "name": "Atlantic Technology 8600eC Center",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "atlantic-technology-8600elr-tower",
+      "name": "Atlantic Technology 8600eLR Tower",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "audio-craftsmen-victoria",
+      "name": "Audio Craftsmen Victoria",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "audio-engine-a2",
+      "name": "Audio Engine A2+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "audio-engine-a5-powered",
+      "name": "Audio Engine A5+ Powered",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "audio-first-design-fidelia",
+      "name": "Audio First Design Fidelia",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "audio-smile-little-british-monitor",
+      "name": "Audio Smile Little British Monitor",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "av123-x-cs-center",
+      "name": "AV123 X-CS Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "avantone-pro-cla-10",
+      "name": "Avantone Pro CLA-10",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "avantone-pro-mixcube",
+      "name": "Avantone Pro MixCube",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "b-rresen-x3",
+      "name": "Børresen X3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bang-olufsen-beolab-20",
+      "name": "Bang & Olufsen Beolab 20",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bang-olufsen-beosound-balance",
+      "name": "Bang & Olufsen Beosound Balance",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "barefoot-footprint-01",
+      "name": "Barefoot Footprint 01",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "behringer-b2030p",
+      "name": "Behringer B2030p",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "behringer-eurolive-b212xl",
+      "name": "Behringer Eurolive B212XL",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "behringer-eurolive-b215xl",
+      "name": "Behringer Eurolive B215XL",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bic-america-fh6-lcr-center",
+      "name": "BIC America FH6-LCR Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bic-america-venturi-dv62si",
+      "name": "BIC America Venturi DV62si",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bose-soundlink-revolve",
+      "name": "Bose SoundLink Revolve",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bose-soundlink-revolve-2",
+      "name": "Bose SoundLink Revolve+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bose-tv-speaker-soundbar",
+      "name": "Bose TV Speaker Soundbar",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "boston-acoustics-a-25",
+      "name": "Boston Acoustics A 25",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bowers-wilkins-607-s2-anniversary-edition",
+      "name": "Bowers & Wilkins 607 S2 Anniversary Edition",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bowers-wilkins-805s",
+      "name": "Bowers & Wilkins 805S",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bowers-wilkins-cwm7-3-s2",
+      "name": "Bowers & Wilkins CWM7.3 S2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bowers-wilkins-formation-flex",
+      "name": "Bowers & Wilkins Formation Flex",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "bowers-wilkins-htm81-d4",
+      "name": "Bowers & Wilkins HTM81 D4",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-a10",
+      "name": "Buchardt Audio A10",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-a500",
+      "name": "Buchardt Audio A500",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-a700",
+      "name": "Buchardt Audio A700",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-e50",
+      "name": "Buchardt Audio E50",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-s400",
+      "name": "Buchardt Audio S400",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "buchardt-audio-s400-mkii",
+      "name": "Buchardt Audio S400 MKII",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "cambridge-audio-minx-xl",
+      "name": "Cambridge Audio Minx XL",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "canon-s-50",
+      "name": "Canon S-50",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "canton-plus-glx-3",
+      "name": "Canton Plus GLX.3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "canton-vento-826-2",
+      "name": "Canton Vento 826.2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "carmody-s2000-diy-speaker-kit",
+      "name": "Carmody S2000 DIY Speaker Kit",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "celuaris-purify-spk5-prototype",
+      "name": "Celuaris Purify SPK5 prototype",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "cerwin-vega-la165",
+      "name": "Cerwin Vega LA165",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "chane-a1-5",
+      "name": "Chane A1.5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "chesky-audio-lc1",
+      "name": "Chesky Audio LC1",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "css-criton-1td-x-diy",
+      "name": "CSS Criton 1TD-X DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "css-criton-3td-x-diy",
+      "name": "CSS Criton 3TD-X DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dali-oberon-vokal",
+      "name": "Dali Oberon Vokal",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dali-rubikore-6",
+      "name": "Dali Rubikore 6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dali-spektor-1",
+      "name": "Dali Spektor 1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dayton-audio-b652-air",
+      "name": "Dayton Audio B652-AIR",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dayton-audio-mk402x",
+      "name": "Dayton Audio MK402X",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dayton-audio-mk602x",
+      "name": "Dayton Audio MK602X",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dayton-audio-opal1",
+      "name": "Dayton Audio OPAL1",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "definitive-technology-bp9020",
+      "name": "Definitive Technology BP9020",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "definitive-technology-demand-d11",
+      "name": "Definitive Technology Demand D11",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "definitive-technology-promonitor-1000",
+      "name": "Definitive Technology ProMonitor 1000",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dennis-murphy-affordable-accuracy-monitor",
+      "name": "Dennis Murphy Affordable Accuracy Monitor",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diapason-emera",
+      "name": "Diapason Emera",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diysg-elusive-1099",
+      "name": "DIYSG Elusive 1099",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diysg-htm-12v1",
+      "name": "DIYSG HTM-12v1",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diysg-htm-12v2",
+      "name": "DIYSG HTM-12v2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diysg-volt-6",
+      "name": "DIYSG Volt-6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "diysg-volt-8-v2",
+      "name": "DIYSG Volt-8 v2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "donner-dyna-3",
+      "name": "Donner Dyna 3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "donner-dyna-4",
+      "name": "Donner Dyna 4",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dutch-dutch-8c",
+      "name": "Dutch Dutch 8C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-core-47",
+      "name": "Dynaudio Core 47",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-emit-20",
+      "name": "Dynaudio Emit 20",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-emit-30",
+      "name": "Dynaudio Emit 30",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-emit-m10",
+      "name": "Dynaudio Emit M10",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-excite-x14",
+      "name": "Dynaudio Excite X14",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-heritage-special",
+      "name": "Dynaudio Heritage Special",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-lyd-5",
+      "name": "Dynaudio LYD 5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "dynaudio-special-forty",
+      "name": "Dynaudio Special Forty",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-airpulse-a100",
+      "name": "Edifier Airpulse A100",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-m60",
+      "name": "Edifier M60",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-mr3bt",
+      "name": "Edifier MR3BT",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-mr4",
+      "name": "Edifier MR4",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-r1280t",
+      "name": "Edifier R1280T",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "edifier-s2000-pro",
+      "name": "Edifier S2000 Pro",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-adante-as-61",
+      "name": "Elac Adante AS-61",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-bs-41",
+      "name": "Elac BS 41",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-bs-u5-slim",
+      "name": "Elac BS U5 Slim",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-carina-bs243-4",
+      "name": "Elac Carina BS243.4",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-debut-2-0-b5-2",
+      "name": "Elac Debut 2.0 B5.2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-debut-2-0-b6-2",
+      "name": "Elac Debut 2.0 B6.2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-debut-3-0-floorstand-df63",
+      "name": "Elac Debut 3.0 Floorstand DF63",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-debut-reference-dbr-62",
+      "name": "Elac Debut Reference DBR-62",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-uni-fi-2-0-ub52",
+      "name": "Elac Uni-Fi 2.0 UB52",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-uni-fi-2-0-uc52-center",
+      "name": "Elac Uni-Fi 2.0 UC52 Center",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-uni-fi-reference-ubr62",
+      "name": "Elac Uni-Fi Reference UBR62",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-uni-fi-reference-ucr52",
+      "name": "Elac Uni-Fi Reference UCR52",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "elac-vela-bs-403",
+      "name": "Elac Vela BS 403",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-6s",
+      "name": "Emotiva Airmotiv 6s",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-b1",
+      "name": "Emotiva Airmotiv B1+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-b2",
+      "name": "Emotiva Airmotiv B2+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-c1",
+      "name": "Emotiva Airmotiv C1+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-c2",
+      "name": "Emotiva Airmotiv C2+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-t2",
+      "name": "Emotiva Airmotiv T2+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "emotiva-airmotiv-xb2",
+      "name": "Emotiva Airmotiv XB2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "endow-audio-bravura-7",
+      "name": "Endow Audio Bravura 7",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "eve-audio-sc305",
+      "name": "Eve Audio SC305",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ex-machina-pulsar-mkii",
+      "name": "Ex-Machina Pulsar MKII",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fiio-sp3",
+      "name": "Fiio SP3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fluance-hfs-signature",
+      "name": "Fluance HFS Signature",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fluid-audio-c35bt",
+      "name": "Fluid Audio C35BT",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fluid-audio-fx50",
+      "name": "Fluid Audio FX50",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fluid-audio-fx50v2",
+      "name": "Fluid Audio FX50v2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fluid-audio-image-2",
+      "name": "Fluid Audio Image 2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-1000-iwlcr6",
+      "name": "Focal 1000 IWLCR6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-alpha-65-evo",
+      "name": "Focal Alpha 65 Evo",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-aria-906",
+      "name": "Focal Aria 906",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-aria-evo-x-no-2",
+      "name": "Focal Aria Evo X No.2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-chora-816",
+      "name": "Focal Chora 816",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-chorus-od-706-v",
+      "name": "Focal Chorus OD 706 V",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-dome-flax",
+      "name": "Focal Dome Flax",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-solo6-be",
+      "name": "Focal Solo6 Be",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-solo6-st6",
+      "name": "Focal Solo6 ST6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "focal-twin6-be",
+      "name": "Focal Twin6 Be",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "fostex-pm03",
+      "name": "Fostex PM03",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8010a",
+      "name": "Genelec 8010A",
       "origin": "Audio Science Review",
       "views": {
         "cea2034": true,
@@ -25,9 +1921,4317 @@
       }
     },
     {
+      "id": "genelec-8050b",
+      "name": "Genelec 8050B",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8320a",
+      "name": "Genelec 8320A",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8330a",
+      "name": "Genelec 8330A",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8331a",
+      "name": "Genelec 8331A",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8341a",
+      "name": "Genelec 8341A",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8351b",
+      "name": "Genelec 8351B",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-8361a",
+      "name": "Genelec 8361A",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-m040",
+      "name": "Genelec M040",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "genelec-s360",
+      "name": "Genelec S360",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "goldenear-brx",
+      "name": "GoldenEar BRX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "google-nest-audio",
+      "name": "Google Nest Audio",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "gr-research-av123",
+      "name": "GR Research AV123",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "gr-research-klipsch-rp-600m-upgrade",
+      "name": "GR Research Klipsch RP-600M Upgrade",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "gr-research-lgk-2-0",
+      "name": "GR Research LGK 2.0",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "gr-research-nx-bravo",
+      "name": "GR Research NX-Bravo",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "gr-research-x-ls-encore-kit",
+      "name": "GR Research X-LS Encore Kit",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "grimani-systems-rixos-l",
+      "name": "Grimani Systems Rixos-L",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "grimm-ls1c-sb1",
+      "name": "Grimm LS1c+SB1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "harbeth-monitor-30-0",
+      "name": "Harbeth Monitor 30.0",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hedd-type-05-a-core",
+      "name": "Hedd Type 05 A-CORE",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hedd-type-20-mk2",
+      "name": "Hedd Type 20 MK2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hivi-3-1a-diy",
+      "name": "Hivi 3.1A DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hivi-swan-x3",
+      "name": "Hivi Swan X3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hsu-research-ccb-8",
+      "name": "Hsu Research CCB-8",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hsu-research-hb-1-mk2",
+      "name": "Hsu Research HB-1 MK2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "hsu-research-mfl-6",
+      "name": "Hsu Research MFL-6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "htd-level-three",
+      "name": "HTD Level THREE",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "human-speakers-81-dk",
+      "name": "Human Speakers 81 dk",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ik-multimedia-iloud-mtm",
+      "name": "IK Multimedia iLoud MTM",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ik-multimedia-iloud-mtm-mkii",
+      "name": "IK Multimedia iLoud MTM MKII",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ikea-symfonisk-picture-frame",
+      "name": "Ikea SYMFONISK Picture Frame",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ikea-symfonisk-speaker-lamp",
+      "name": "Ikea SYMFONISK Speaker Lamp",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-interlude-il10",
+      "name": "Infinity Interlude IL10",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-primus-360",
+      "name": "Infinity Primus 360",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-r162",
+      "name": "Infinity R162",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-r253",
+      "name": "Infinity R253",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-rc263",
+      "name": "Infinity RC263",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "infinity-rs152",
+      "name": "Infinity RS152",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jamo-c93-ii",
+      "name": "Jamo C93 II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jamo-s7-15b",
+      "name": "Jamo S7-15B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jamo-s803",
+      "name": "Jamo S803",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-104",
+      "name": "JBL 104",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-305p-mark-ii",
+      "name": "JBL 305P Mark ii",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-306p-mark-ii",
+      "name": "JBL 306P Mark ii",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-308p-mark-ii",
+      "name": "JBL 308P Mark ii",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4305p",
+      "name": "JBL 4305P",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4309",
+      "name": "JBL 4309",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4312mii",
+      "name": "JBL 4312MII",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4319",
+      "name": "JBL 4319",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4329p",
+      "name": "JBL 4329P",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4349",
+      "name": "JBL 4349",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-4367",
+      "name": "JBL 4367",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-705p",
+      "name": "JBL 705P",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-708i-active",
+      "name": "JBL 708i active",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-708i-passive",
+      "name": "JBL 708i passive",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-708p",
+      "name": "JBL 708P",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-ac25",
+      "name": "JBL AC25",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-cbt-70j-1",
+      "name": "JBL CBT 70J-1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-control-1-pro",
+      "name": "JBL Control 1 Pro",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-control-29av-1",
+      "name": "JBL Control 29AV-1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-control-x",
+      "name": "JBL Control X",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-hdi-1600",
+      "name": "JBL HDI-1600",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-hdi-3600",
+      "name": "JBL HDI-3600",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-hdi-3800",
+      "name": "JBL HDI-3800",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-hdi-4500",
+      "name": "JBL HDI-4500",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-l100-classic-mkii",
+      "name": "JBL L100 Classic MKII",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-l52-classic",
+      "name": "JBL L52 Classic",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-m2",
+      "name": "JBL M2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-scs-8",
+      "name": "JBL SCS 8",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-srx835p",
+      "name": "JBL SRX835P",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-250b",
+      "name": "JBL Stage 250B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-280f",
+      "name": "JBL Stage 280F",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-a120",
+      "name": "JBL Stage A120",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-a125c",
+      "name": "JBL Stage A125C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-a130",
+      "name": "JBL Stage A130",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-a135c",
+      "name": "JBL Stage A135C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-stage-a180",
+      "name": "JBL Stage A180",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-studio-520c",
+      "name": "JBL Studio 520C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-studio-530",
+      "name": "JBL Studio 530",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-studio-590",
+      "name": "JBL Studio 590",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-studio-630",
+      "name": "JBL Studio 630",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-studio-698",
+      "name": "JBL Studio 698",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-synthesis-array-880",
+      "name": "JBL Synthesis Array 880",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-synthesis-scl-5",
+      "name": "JBL Synthesis SCL-5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-synthesis-scl-6",
+      "name": "JBL Synthesis SCL-6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-synthesis-scl-7",
+      "name": "JBL Synthesis SCL-7",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jbl-xpl90",
+      "name": "JBL XPL90",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jeff-bagby-mandolin-diy",
+      "name": "Jeff Bagby Mandolin DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "jtr-noesis-210ht",
+      "name": "JTR Noesis 210ht",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-in-5",
+      "name": "Kali IN-5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-in-8",
+      "name": "Kali IN-8",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-in-8v2",
+      "name": "Kali IN-8v2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-lp-6",
+      "name": "Kali LP-6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-lp-6v2",
+      "name": "Kali LP-6v2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-lp-8v2",
+      "name": "Kali LP-8v2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-lp-unf",
+      "name": "Kali LP-UNF",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kali-sm-5",
+      "name": "Kali SM-5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kanto-yu",
+      "name": "Kanto YU",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kanto-yu4",
+      "name": "Kanto YU4",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kanto-yu6",
+      "name": "Kanto YU6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-blade-2-meta",
+      "name": "KEF Blade 2 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ci250rrm-thx",
+      "name": "KEF CI250RRM-THX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ci3160rl-thx",
+      "name": "KEF Ci3160RL-THX",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ci3160rlm-thx",
+      "name": "KEF Ci3160RLM-THX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ls50",
+      "name": "KEF LS50",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ls50-meta",
+      "name": "KEF LS50 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ls50-wireless-ii",
+      "name": "KEF LS50 Wireless II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-ls60-wireless",
+      "name": "KEF LS60 Wireless",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-lsx",
+      "name": "KEF LSX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-lsx-ii-lt",
+      "name": "KEF LSX II LT",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q-concerto-meta",
+      "name": "KEF Q Concerto Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q100",
+      "name": "KEF Q100",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q11-meta",
+      "name": "KEF Q11 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q150",
+      "name": "KEF Q150",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q250",
+      "name": "KEF Q250",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q3-meta",
+      "name": "KEF Q3 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q350",
+      "name": "KEF Q350",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q650c",
+      "name": "KEF Q650C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-q8-meta",
+      "name": "KEF Q8 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r11-meta",
+      "name": "KEF R11 Meta",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r2c",
+      "name": "KEF R2c",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r3",
+      "name": "KEF R3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r3-meta",
+      "name": "KEF R3 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r5",
+      "name": "KEF R5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r5-meta",
+      "name": "KEF R5 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r8-meta",
+      "name": "KEF R8 Meta",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-r8a",
+      "name": "KEF R8a",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-reference-1-meta",
+      "name": "KEF Reference 1 Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-reference-203",
+      "name": "KEF Reference 203",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-reference-2c-meta",
+      "name": "KEF Reference 2C Meta",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-reference-4c",
+      "name": "KEF Reference 4C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-t101",
+      "name": "KEF T101",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kef-t301c",
+      "name": "KEF T301C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "kii-audio-three",
+      "name": "Kii Audio Three",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klh-model-five",
+      "name": "KLH Model Five",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-forte-iv",
+      "name": "Klipsch Forte IV",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-heresy-iv",
+      "name": "Klipsch Heresy IV",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-r41m",
+      "name": "Klipsch R41M",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-404c-ii",
+      "name": "Klipsch RP-404C II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-5000f-ii",
+      "name": "Klipsch RP-5000F II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-500c-ii",
+      "name": "Klipsch RP-500C II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-500m",
+      "name": "Klipsch RP-500M",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-500m-ii",
+      "name": "Klipsch RP-500M II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-504c-ii",
+      "name": "Klipsch RP-504C II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-6000f-ii",
+      "name": "Klipsch RP-6000F II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-600m",
+      "name": "Klipsch RP-600M",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-600m-ii",
+      "name": "Klipsch RP-600M II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-rp-8000f-ii",
+      "name": "Klipsch RP-8000F II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-the-fives",
+      "name": "Klipsch The Fives",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "klipsch-the-nines",
+      "name": "Klipsch The Nines",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "krk-systems-classic-5",
+      "name": "KRK Systems Classic 5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "krk-systems-rokit-5-g4",
+      "name": "KRK Systems RoKit 5 G4",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "lcm-nearfield-monitor-3-d-printed-diy",
+      "name": "LCM Nearfield Monitor 3-D Printed DIY",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "linkwitz-lxmini-diy",
+      "name": "Linkwitz LXMini DIY",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "m-audio-bx3-d3",
+      "name": "M-Audio BX3 D3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "m-audio-bx8-d3",
+      "name": "M-Audio BX8 D3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mackie-cr3-x",
+      "name": "Mackie CR3-X",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mag-theatron-mc12-c",
+      "name": "MAG Theatron MC12-C",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mag-theatron-s6",
+      "name": "MAG Theatron S6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "magnepan-lrs",
+      "name": "Magnepan LRS",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "magnepan-lrs-2",
+      "name": "Magnepan LRS+",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "march-audio-sointuva",
+      "name": "March Audio Sointuva",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "march-audio-sointuva-awg",
+      "name": "March Audio Sointuva AWG",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "martin-logan-5xw",
+      "name": "Martin Logan 5XW",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "martinlogan-motion-4i",
+      "name": "MartinLogan Motion 4i",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "martinlogan-motion-b10",
+      "name": "MartinLogan Motion B10",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "martinlogan-motion-xt-b100",
+      "name": "MartinLogan Motion XT B100",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mcintosh-xr50",
+      "name": "Mcintosh XR50",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mesanovic-cdm65",
+      "name": "Mesanovic CDM65",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "meyer-sound-amie",
+      "name": "Meyer Sound Amie",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "meyer-sound-mm-4xp",
+      "name": "Meyer Sound MM-4XP",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "micca-mb42x-c",
+      "name": "Micca MB42X-C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "micca-mb42x-g2",
+      "name": "Micca MB42X-G2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "micca-rb42",
+      "name": "Micca RB42",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "miller-kreisel-iw150",
+      "name": "Miller & Kreisel IW150",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "miller-kreisel-s150",
+      "name": "Miller & Kreisel S150",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "miller-kreisel-s150-thx",
+      "name": "Miller & Kreisel S150 THX",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mission-lx-3-mkii",
+      "name": "Mission LX-3 MKII",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mofi-sourcepoint-10",
+      "name": "MoFi SourcePoint 10",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mofi-sourcepoint-10-master-edition",
+      "name": "MoFi SourcePoint 10 Master Edition",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mofi-sourcepoint-8",
+      "name": "MoFi SourcePoint 8",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mofi-sourcepoint-888",
+      "name": "MoFi SourcePoint 888",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "mofi-sourcepoint-v10-master-edition",
+      "name": "MoFi SourcePoint V10 Master Edition",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monitor-audio-apex-a10",
+      "name": "Monitor Audio Apex A10",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monitor-audio-silver-100-6g",
+      "name": "Monitor Audio Silver 100 6g",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monitor-audio-silver-50-7g",
+      "name": "Monitor Audio Silver 50 7g",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-dt-3",
+      "name": "Monoprice DT-3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-mm-3",
+      "name": "Monoprice MM-3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-encore-b6",
+      "name": "Monoprice Monolith Encore B6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-encore-c6",
+      "name": "Monoprice Monolith Encore C6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-encore-t6",
+      "name": "Monoprice Monolith Encore T6",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-thx-365c",
+      "name": "Monoprice Monolith THX-365C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-thx-365iw",
+      "name": "Monoprice Monolith THX-365IW",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-thx-365t",
+      "name": "Monoprice Monolith THX-365T",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "monoprice-monolith-thx-compact-satellite",
+      "name": "Monoprice Monolith THX Compact Satellite",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "moondrop-m4p",
+      "name": "Moondrop M4P",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "morel-avyra-633",
+      "name": "Morel AVYRA 633",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "natural-sound-ns17",
+      "name": "Natural Sound NS17",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
       "id": "neumann-kh-120-ii",
       "name": "Neumann KH 120 II",
       "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumann-kh-150",
+      "name": "Neumann KH 150",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumann-kh-310a",
+      "name": "Neumann KH 310A",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumann-kh-420g",
+      "name": "Neumann KH 420G",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumann-kh-80",
+      "name": "Neumann KH 80",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumi-bs5",
+      "name": "Neumi BS5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumi-bs5p",
+      "name": "Neumi BS5P",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumi-bs5p-arc",
+      "name": "Neumi BS5P-ARC",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "neumi-silk-4",
+      "name": "Neumi Silk 4",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "nht-c3",
+      "name": "NHT C3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "nht-pro-m-00",
+      "name": "NHT Pro M-00",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "nht-sb2",
+      "name": "NHT SB2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "nht-super-zero-2-1",
+      "name": "NHT Super Zero 2.1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "nubert-nuvero-60",
+      "name": "Nubert NuVero 60",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "ocean-way-hr5",
+      "name": "Ocean Way HR5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "onkyo-gx-30arc",
+      "name": "Onkyo GX 30ARC",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "osd-audio-ap650",
+      "name": "OSD Audio AP650",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "palmer-orbit-11",
+      "name": "Palmer Orbit 11",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "paradigm-cinema-100",
+      "name": "Paradigm Cinema 100",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "paradigm-founder-40b",
+      "name": "Paradigm Founder 40B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "paradigm-founder-90c",
+      "name": "Paradigm Founder 90C",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "paradigm-monitor-se-atom",
+      "name": "Paradigm Monitor SE Atom",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "paradigm-prestige-15b",
+      "name": "Paradigm Prestige 15B",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "part-express-diy-c-note",
+      "name": "Part Express DIY C-Note",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "part-express-diy-copperhead",
+      "name": "Part Express DIY Copperhead",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "part-express-diy-overnight-sensations-mt",
+      "name": "Part Express DIY Overnight Sensations MT",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "part-express-diy-samba-mt",
+      "name": "Part Express DIY Samba MT",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "perlisten-s4b",
+      "name": "Perlisten s4b",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "phase-tech-pc-3-1",
+      "name": "Phase Tech PC 3.1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "philharmonic-bmr",
+      "name": "Philharmonic BMR",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "philharmonic-ceramic-mini",
+      "name": "Philharmonic Ceramic Mini",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pioneer-dj-vm-50",
+      "name": "Pioneer DJ VM-50",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pioneer-sp-bs22-lr",
+      "name": "Pioneer SP-BS22-LR",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pioneer-sp-c22",
+      "name": "Pioneer SP-C22",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pioneer-sp-ebs73-lr",
+      "name": "Pioneer SP-EBS73-LR",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pioneer-sp-ec73",
+      "name": "Pioneer SP-EC73",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pmc-result6",
+      "name": "PMC Result6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pmc-twenty-21",
+      "name": "PMC Twenty 21",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-atrium-4",
+      "name": "Polk Audio Atrium 4",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-monitor-40-series-ii",
+      "name": "Polk Audio Monitor 40 Series II",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-reserve-r100",
+      "name": "Polk Audio Reserve R100",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-reserve-r200",
+      "name": "Polk Audio Reserve R200",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-reserve-r350",
+      "name": "Polk Audio Reserve R350",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-reserve-r500",
+      "name": "Polk Audio Reserve R500",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-reserve-r700",
+      "name": "Polk Audio Reserve R700",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-signature-elite-es20",
+      "name": "Polk Audio Signature Elite ES20",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-signature-elite-es60",
+      "name": "Polk Audio Signature Elite ES60",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-signature-s15",
+      "name": "Polk Audio Signature S15",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-signature-s30",
+      "name": "Polk Audio Signature S30",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-t15",
+      "name": "Polk Audio T15",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-t50",
+      "name": "Polk Audio T50",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt15",
+      "name": "Polk Audio XT15",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt20",
+      "name": "Polk Audio XT20",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt30",
+      "name": "Polk Audio XT30",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt35",
+      "name": "Polk Audio XT35",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt60",
+      "name": "Polk Audio XT60",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "polk-audio-xt70",
+      "name": "Polk Audio XT70",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "power-sound-audio-mt-110-m",
+      "name": "Power Sound Audio MT-110-M",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "presonus-eris-e3-5",
+      "name": "Presonus Eris E3.5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "presonus-eris-e3-5-2nd-edition",
+      "name": "Presonus Eris E3.5 2nd edition",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "presonus-eris-e5-xt",
+      "name": "Presonus Eris E5 XT",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "presonus-spectre-s6",
+      "name": "Presonus Spectre S6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psaudio-aspen-fr10",
+      "name": "PSAudio aspen FR10",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psaudio-aspen-fr5",
+      "name": "PSAudio aspen FR5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psb-alpha-p3",
+      "name": "PSB Alpha P3",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psb-alpha-p5",
+      "name": "PSB Alpha P5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psb-imagine-b50",
+      "name": "PSB Imagine B50",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psb-imagine-t65",
+      "name": "PSB Imagine T65",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "psi-audio-a21-m",
+      "name": "PSI Audio A21-M",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "pylon-jasper-monitor-18",
+      "name": "Pylon Jasper Monitor 18",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "q-acoustics-3020i",
+      "name": "Q Acoustics 3020i",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "q-acoustics-5020",
+      "name": "Q Acoustics 5020",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "q-acoustics-5040",
+      "name": "Q Acoustics 5040",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "radiant-acoustics-clarity-6-2",
+      "name": "Radiant Acoustics Clarity 6.2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "radiant-acoustics-clarity-66",
+      "name": "Radiant Acoustics Clarity 66",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "rcf-ayra-pro5",
+      "name": "RCF Ayra Pro5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "realistic-mc-1000",
+      "name": "Realistic MC-1000",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-c10",
+      "name": "Revel C10",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-c208",
+      "name": "Revel C208",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-c25",
+      "name": "Revel C25",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-c426be",
+      "name": "Revel C426Be",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-c52",
+      "name": "Revel C52",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-f206",
+      "name": "Revel F206",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-f208",
+      "name": "Revel F208",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-f228be",
+      "name": "Revel F228Be",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-f328be",
+      "name": "Revel F328be",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-f35",
+      "name": "Revel F35",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m105",
+      "name": "Revel M105",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m106",
+      "name": "Revel M106",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m126be",
+      "name": "Revel M126Be",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m16",
+      "name": "Revel M16",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m22",
+      "name": "Revel M22",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m55xc",
+      "name": "Revel M55XC",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-m80xc",
+      "name": "Revel M80XC",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-w553l",
+      "name": "Revel W553L",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-w893",
+      "name": "Revel W893",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revel-w990",
+      "name": "Revel W990",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "revival-audio-atalante-5",
+      "name": "Revival Audio Atalante 5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "rockville-rocktower-68b",
+      "name": "Rockville RockTower 68B",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "role-audio-skiff",
+      "name": "Role Audio Skiff",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "rsl-cg25-center",
+      "name": "RSL CG25 Center",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "rsl-outsider-ii",
+      "name": "RSL Outsider II",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "salk-wow1",
+      "name": "Salk WoW1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sehlin-helium-diy",
+      "name": "Sehlin Helium DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "selah-audio-integrity-diy",
+      "name": "Selah Audio Integrity DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "selah-audio-rc3r",
+      "name": "Selah Audio RC3R",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "shivaudyo-point-zero",
+      "name": "Shivaudyo Point Zero",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sonos-five",
+      "name": "Sonos Five",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sonus-faber-lumina-ii",
+      "name": "Sonus Faber Lumina II",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sonus-faber-sonetto-ii-g2",
+      "name": "Sonus Faber Sonetto II G2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sony-ss-cs3",
+      "name": "Sony SS-CS3",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "sony-ss-cs5",
+      "name": "Sony SS-CS5",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "soundkraft-enigma-bt",
+      "name": "Soundkraft Enigma BT",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "svs-prime-bookshelf",
+      "name": "SVS Prime Bookshelf",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "svs-prime-center",
+      "name": "SVS Prime Center",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "svs-ultra-bookshelf",
+      "name": "SVS Ultra Bookshelf",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "svs-ultra-evolution-pinnacle-tower",
+      "name": "SVS Ultra Evolution Pinnacle Tower",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tad-compact-reference-one-cr1tx",
+      "name": "TAD COMPACT REFERENCE ONE CR1TX",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tad-evolution-2",
+      "name": "TAD Evolution 2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tannoy-revolution-xt6",
+      "name": "Tannoy Revolution XT6",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tannoy-system-600",
+      "name": "Tannoy System 600",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "teac-s-300hr",
+      "name": "Teac S-300HR",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "technics-sb-c700",
+      "name": "Technics SB-C700",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "technics-sb-f1",
+      "name": "Technics SB-F1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tekton-m-lore",
+      "name": "Tekton M-Lore",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "tekton-troubadour",
+      "name": "Tekton Troubadour",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "theory-audio-sb25",
+      "name": "Theory Audio SB25",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "thomann-swissonic-a305",
+      "name": "Thomann Swissonic A305",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "thomann-swissonic-a306",
+      "name": "Thomann Swissonic A306",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "totem-acoustic-kin-one",
+      "name": "Totem Acoustic Kin One",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "totem-acoustics-rainmaker",
+      "name": "Totem Acoustics Rainmaker",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "triad-in-room-gold-lcr",
+      "name": "Triad In-Room Gold LCR",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "triangle-borea-br03",
+      "name": "Triangle Borea BR03",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "triangle-esprit-antal-ez",
+      "name": "Triangle Esprit Antal Ez",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vanatoo-transparent-one-encore",
+      "name": "Vanatoo Transparent One Encore",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vanatoo-transparent-one-encore-plus",
+      "name": "Vanatoo Transparent One Encore Plus",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vanatoo-transparent-zero",
+      "name": "Vanatoo Transparent Zero",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vanatoo-transparent-zero-plus",
+      "name": "Vanatoo Transparent Zero Plus",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vandersteen-2c",
+      "name": "Vandersteen 2c",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vandersteen-treo-ct",
+      "name": "Vandersteen Treo CT",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vandersteen-vcc-5",
+      "name": "Vandersteen VCC-5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "vandersteen-vlr",
+      "name": "Vandersteen VLR",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "verdant-audio-bambusa-al-1",
+      "name": "Verdant Audio Bambusa AL 1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "verdant-audio-bambusa-mg-1",
+      "name": "Verdant Audio Bambusa MG 1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-aura-2",
+      "name": "Wharfedale Aura 2",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-denton-80th-anniversary",
+      "name": "Wharfedale Denton 80th Anniversary",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-diamond-12-1",
+      "name": "Wharfedale Diamond 12.1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-diamond-220",
+      "name": "Wharfedale Diamond 220",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-evo-4-1",
+      "name": "Wharfedale EVO 4.1",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-linton-85th-anniversary",
+      "name": "Wharfedale Linton 85th Anniversary",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wharfedale-super-linton",
+      "name": "Wharfedale Super Linton",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "wilson-audio-tunetot",
+      "name": "Wilson Audio TuneTot",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "xmechanik-mechano23-diy",
+      "name": "XMechanik Mechano23 DIY",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "xsa-labs-vanguard",
+      "name": "XSA Labs Vanguard",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-hs5",
+      "name": "Yamaha HS5",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-hs7",
+      "name": "Yamaha HS7",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-hs8",
+      "name": "Yamaha HS8",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-ns-10m-studio",
+      "name": "Yamaha NS-10M Studio",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-ns-6490",
+      "name": "Yamaha NS-6490",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "yamaha-ns-800a",
+      "name": "Yamaha NS-800A",
+      "origin": "Erin's Audio Corner",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "zaph-audio-za5-2",
+      "name": "Zaph Audio ZA5.2",
+      "origin": "Audio Science Review",
+      "views": {
+        "cea2034": true,
+        "inRoom": true,
+        "sweetSpot": true,
+        "offAxis": true,
+        "step": true
+      }
+    },
+    {
+      "id": "zu-audio-method",
+      "name": "Zu Audio Method",
+      "origin": "Erin's Audio Corner",
       "views": {
         "cea2034": true,
         "inRoom": true,

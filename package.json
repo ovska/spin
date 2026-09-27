@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "data": "tsx scripts/build-data.ts",
+    "sync": "tsx scripts/sync-measurements.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -16,6 +16,8 @@ import { SweetSpotSettingsSheet } from './components/SweetSpotSettingsSheet';
 import { ThemeToggle } from './components/ThemeToggle';
 import './app.css';
 
+const DEFAULT_SPEAKER_IDS = ['kef-r3', 'genelec-8030c', 'neumann-kh-120-ii'];
+
 function handleArrowKeys(e: KeyboardEvent): void {
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
   const ids = selectedSpeakerIds.value;
@@ -35,7 +37,13 @@ export function App() {
 
     void loadSpeakerIndex().then(() => {
       if (selectedSpeakerIds.value.length === 0) {
-        const ids = speakerIndex.value.slice(0, 3).map((s) => s.id);
+        const available = new Set(speakerIndex.value.map((s) => s.id));
+        // Prefer the 3 originally-curated speakers as the first-run default
+        // regardless of how large the synced catalog has grown - otherwise
+        // this would just be whichever 3 sort first alphabetically.
+        const preferred = DEFAULT_SPEAKER_IDS.filter((id) => available.has(id));
+        const rest = speakerIndex.value.map((s) => s.id).filter((id) => !preferred.includes(id));
+        const ids = [...preferred, ...rest].slice(0, 3);
         selectedSpeakerIds.value = ids;
         activeSpeakerId.value = ids[0] ?? null;
         referenceSpeakerId.value = ids[1] ?? null;
