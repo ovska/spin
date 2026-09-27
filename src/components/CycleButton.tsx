@@ -3,6 +3,12 @@ import type { ComponentChildren } from 'preact';
 export interface CycleOption<T> {
   value: T;
   label: string;
+  /** Where this option's segment sits on the bottom indicator, as [0, 1]
+   * fractions of the track - lets the indicator mean something (e.g. the
+   * frequency range button lighting up roughly the part of the spectrum
+   * each preset covers) instead of just "position in the list". Options
+   * without one fall back to an equal-width slot at their index. */
+  fill?: { left: number; width: number };
 }
 
 interface Props<T> {
@@ -24,7 +30,7 @@ export function CycleButton<T>({ icon, groupLabel, options, value, onChange }: P
     options.findIndex((o) => o.value === value),
   );
   const current = options[index];
-  const segWidth = 100 / options.length;
+  const fill = current.fill ?? { left: index / options.length, width: 1 / options.length };
   // Reserve width for the longest possible label up front (in `ch`, i.e.
   // roughly one digit-width per character) so cycling through options of
   // different lengths ("Range: Full" -> "Range: Crossover") never resizes
@@ -47,7 +53,7 @@ export function CycleButton<T>({ icon, groupLabel, options, value, onChange }: P
         {groupLabel}: {current.label}
       </span>
       <span class="cycle-btn__track">
-        <span class="cycle-btn__fill" style={{ left: `${index * segWidth}%`, width: `${segWidth}%` }} />
+        <span class="cycle-btn__fill" style={{ left: `${fill.left * 100}%`, width: `${fill.width * 100}%` }} />
       </span>
     </button>
   );

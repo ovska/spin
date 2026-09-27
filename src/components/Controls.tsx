@@ -11,13 +11,18 @@ const SMOOTHING_OPTIONS: CycleOption<SmoothingMode>[] = [
   { value: 'erb', label: 'ERB' },
 ];
 
+// Indicator fill is schematic, not literally proportional to each preset's
+// Hz span (that would put Bass and Treble's segments at nearly-invisible
+// widths on a log scale) - Low/High are mirrored halves, Bass/Treble
+// mirrored thirds at the outer edges, and Mid a wide, centered band
+// since the crossover region overlaps both.
 const ZOOM_OPTIONS: CycleOption<ZoomPreset>[] = [
-  { value: 'full', label: 'Full' },
-  { value: 'low', label: 'Low' },
-  { value: 'bass', label: 'Bass' },
-  { value: 'crossover', label: 'Mid' },
-  { value: 'treble', label: 'Treble' },
-  { value: 'high', label: 'High' },
+  { value: 'full', label: 'Full', fill: { left: 0, width: 1 } },
+  { value: 'low', label: 'Low', fill: { left: 0, width: 1 / 2 } },
+  { value: 'bass', label: 'Bass', fill: { left: 0, width: 1 / 3 } },
+  { value: 'crossover', label: 'Mid', fill: { left: 1 / 6, width: 2 / 3 } },
+  { value: 'treble', label: 'Treble', fill: { left: 2 / 3, width: 1 / 3 } },
+  { value: 'high', label: 'High', fill: { left: 1 / 2, width: 1 / 2 } },
 ];
 
 const YSPAN_OPTIONS: CycleOption<YSpanDb>[] = [
