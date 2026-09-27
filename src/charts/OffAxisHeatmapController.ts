@@ -33,7 +33,6 @@ export class OffAxisHeatmapController extends ChartController {
     const base = baseOptions(width, height);
     return {
       ...base,
-      cursor: { ...base.cursor, y: false, x: false },
       scales: { ...base.scales, ang: { range: () => this.angleRange() } },
       axes: [
         { ...base.axes![0], size: 0, ticks: { show: false } },

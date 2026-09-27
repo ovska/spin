@@ -24,22 +24,17 @@ export function freqAxisValues(_u: uPlot, splits: (number | null)[]): string[] {
 }
 
 /** Shared uPlot options: log frequency x axis, no built-in drag/zoom box (a
- * custom gesture handler owns pan/pinch), no point markers, no legend (this
- * is a quick-eyeballing tool, not a precise-readout one), touch-action left
- * to the caller's CSS. */
+ * custom gesture handler owns pan/pinch), no point markers, no legend, and
+ * no cursor crosshair (this is a quick-eyeballing tool, not a
+ * precise-readout one - a hover line with nothing to read at it would just
+ * be confusing), touch-action left to the caller's CSS. */
 export function baseOptions(width: number, height: number): Partial<uPlot.Options> {
   return {
     width,
     height,
     padding: [8, 8, 0, 0],
     legend: { show: false },
-    cursor: {
-      show: true,
-      x: true,
-      y: false,
-      drag: { setScale: false, x: false, y: false },
-      points: { show: false },
-    },
+    cursor: { show: false },
     scales: {
       // uPlot re-invokes range() for the x-scale on every commit (not just
       // the first auto-scale), passing the scale's current min/max as
