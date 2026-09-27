@@ -13,6 +13,7 @@ import { CursorReadout } from './components/CursorReadout';
 import { Controls } from './components/Controls';
 import { AboutSheet } from './components/AboutSheet';
 import { SweetSpotSettingsSheet } from './components/SweetSpotSettingsSheet';
+import { ThemeToggle } from './components/ThemeToggle';
 import './app.css';
 
 function handleArrowKeys(e: KeyboardEvent): void {
@@ -55,16 +56,19 @@ export function App() {
     <div class="app">
       <header class="app-header">
         <span class="app-header__title">Spin</span>
-        <button
-          type="button"
-          class="app-header__about"
-          aria-label="About"
-          onClick={() => {
-            aboutOpen.value = true;
-          }}
-        >
-          i
-        </button>
+        <div class="app-header__actions">
+          <ThemeToggle />
+          <button
+            type="button"
+            class="app-header__about"
+            aria-label="About"
+            onClick={() => {
+              aboutOpen.value = true;
+            }}
+          >
+            i
+          </button>
+        </div>
       </header>
       <SpeakerChips />
       <div class="tabs-with-settings">

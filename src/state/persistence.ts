@@ -8,6 +8,7 @@ import { smoothing, ySpanDb, zoomPreset, xRange, ZOOM_RANGES, type YSpanDb, type
 import { activeSpeakerId, referenceSpeakerId, recentSpeakerIds, selectedSpeakerIds } from './speakers';
 import { currentTab, type ViewId, ALL_VIEWS } from './ui';
 import { offAxisAngleDeg, offAxisPlane } from './offaxis';
+import { applyTheme, themeMode, type ThemeMode } from './theme';
 
 const PREFS_KEY = 'spin:prefs';
 const RECENT_LIMIT = 8;
@@ -17,6 +18,7 @@ interface Prefs {
   ySpanDb: YSpanDb;
   zoomPreset: ZoomPreset;
   recentSpeakerIds: string[];
+  themeMode: ThemeMode;
 }
 
 function safeGet(key: string): string | null {
@@ -35,6 +37,23 @@ function safeSet(key: string, value: string): void {
   }
 }
 
+const THEME_MODES: ThemeMode[] = ['auto', 'light', 'dark'];
+
+/** Reads and applies the saved theme synchronously, before Preact renders -
+ * called from main.tsx so a forced dark/light choice never flashes the
+ * other theme on first paint. loadPrefs() (called later, from App's effect)
+ * re-reads the same blob into the reactive signal. */
+export function applyInitialTheme(): void {
+  const raw = safeGet(PREFS_KEY);
+  if (!raw) return;
+  try {
+    const prefs: Partial<Prefs> = JSON.parse(raw);
+    if (prefs.themeMode && THEME_MODES.includes(prefs.themeMode)) applyTheme(prefs.themeMode);
+  } catch {
+    // corrupt prefs blob - ignore and start fresh
+  }
+}
+
 export function loadPrefs(): void {
   const raw = safeGet(PREFS_KEY);
   if (!raw) return;
@@ -47,6 +66,7 @@ export function loadPrefs(): void {
       xRange.value = ZOOM_RANGES[prefs.zoomPreset];
     }
     if (Array.isArray(prefs.recentSpeakerIds)) recentSpeakerIds.value = prefs.recentSpeakerIds;
+    if (prefs.themeMode && THEME_MODES.includes(prefs.themeMode)) themeMode.value = prefs.themeMode;
   } catch {
     // corrupt prefs blob - ignore and start fresh
   }
@@ -54,11 +74,15 @@ export function loadPrefs(): void {
 
 export function startPrefsPersistence(): void {
   effect(() => {
+    applyTheme(themeMode.value);
+  });
+  effect(() => {
     const prefs: Prefs = {
       smoothing: smoothing.value,
       ySpanDb: ySpanDb.value,
       zoomPreset: zoomPreset.value,
       recentSpeakerIds: recentSpeakerIds.value,
+      themeMode: themeMode.value,
     };
     safeSet(PREFS_KEY, JSON.stringify(prefs));
   });

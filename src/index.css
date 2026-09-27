@@ -14,8 +14,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Auto (no explicit choice): follow the OS, unless the user forced light. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --text: #e6e5e8;
     --text-dim: #9c98a3;
     --bg: #16171d;
@@ -23,7 +24,25 @@
     --border: #2e303a;
     --accent: #5aa9dd;
     --accent-contrast: #0b0c0f;
+    color-scheme: dark;
   }
+}
+
+/* Forced dark, regardless of OS preference. */
+:root[data-theme='dark'] {
+  --text: #e6e5e8;
+  --text-dim: #9c98a3;
+  --bg: #16171d;
+  --bg-raised: #1f2028;
+  --border: #2e303a;
+  --accent: #5aa9dd;
+  --accent-contrast: #0b0c0f;
+  color-scheme: dark;
+}
+
+/* Forced light, regardless of OS preference. */
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 * {

@@ -12,6 +12,20 @@
   font-weight: 600;
 }
 
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-header__theme {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  font-size: 12px;
+}
+
 .app-header__about {
   width: 26px;
   height: 26px;
