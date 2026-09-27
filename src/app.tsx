@@ -62,7 +62,10 @@ export function App() {
   return (
     <div class="app">
       <header class="app-header">
-        <span class="app-header__title">Spin</span>
+        <span class="app-header__brand">
+          <img class="app-header__logo" src={`${import.meta.env.BASE_URL}logo-192.png`} alt="" width="24" height="24" />
+          <span class="app-header__title">Spin</span>
+        </span>
         <div class="app-header__actions">
           <ThemeToggle />
           <button

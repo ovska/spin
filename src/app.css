@@ -12,6 +12,18 @@
   font-weight: 600;
 }
 
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-header__logo {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
 .app-header__actions {
   display: flex;
   align-items: center;
