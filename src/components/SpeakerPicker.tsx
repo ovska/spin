@@ -4,6 +4,11 @@ import { activeSpeakerId, recentSpeakerIds, selectedSpeakerIds, speakerIndex } f
 import { noteRecentSpeaker } from '../state/persistence';
 import { pickerOpen } from '../state/ui';
 
+const ORIGIN_ABBR: Record<string, string> = {
+  'Audio Science Review': 'ASR',
+  "Erin's Audio Corner": 'EAC',
+};
+
 export function SpeakerPicker() {
   const [search, setSearch] = useState('');
 
@@ -54,7 +59,7 @@ export function SpeakerPicker() {
             <li key={entry.id}>
               <button type="button" onClick={() => pick(entry.id)} disabled={selectedSpeakerIds.value.includes(entry.id)}>
                 {entry.name}
-                <span class="sheet-list__origin">{entry.origin}</span>
+                <span class="sheet-list__origin">{ORIGIN_ABBR[entry.origin] ?? entry.origin}</span>
               </button>
             </li>
           ))}

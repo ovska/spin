@@ -1,4 +1,5 @@
 import type { DataIndex, SpeakerData } from '../core/types';
+import { decodeSpeakerBinary } from '../core/binaryFormat';
 import { speakerDataCache, speakerIndex } from '../state/speakers';
 
 const base = import.meta.env.BASE_URL;
@@ -15,9 +16,9 @@ export async function ensureSpeakerLoaded(id: string): Promise<void> {
 
   speakerDataCache.value = { ...speakerDataCache.value, [id]: 'loading' };
   try {
-    const res = await fetch(`${base}data/${id}.json`);
+    const res = await fetch(`${base}data/${id}.spb`);
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const data: SpeakerData = await res.json();
+    const data: SpeakerData = decodeSpeakerBinary(await res.arrayBuffer());
     speakerDataCache.value = { ...speakerDataCache.value, [id]: data };
   } catch {
     speakerDataCache.value = { ...speakerDataCache.value, [id]: 'error' };

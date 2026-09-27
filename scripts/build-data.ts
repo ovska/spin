@@ -11,6 +11,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { buildSpeaker, indexEntryFor, type SpeakerSource } from './lib/buildSpeaker.ts';
+import { encodeSpeakerBinary } from '../src/core/binaryFormat.ts';
 import type { DataIndex } from '../src/core/types.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -37,7 +38,7 @@ function main(): void {
       origin: 'Audio Science Review',
     };
     const data = buildSpeaker(source);
-    writeFileSync(join(OUT_DIR, `${spec.id}.json`), JSON.stringify(data));
+    writeFileSync(join(OUT_DIR, `${spec.id}.spb`), encodeSpeakerBinary(data));
     index.speakers.push(indexEntryFor(data));
   }
 

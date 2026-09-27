@@ -14,6 +14,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 import { buildSpeaker, hasRequiredFiles, indexEntryFor, type SpeakerSource } from './lib/buildSpeaker.ts';
+import { encodeSpeakerBinary } from '../src/core/binaryFormat.ts';
 import type { DataIndex, SpeakerIndexEntry } from '../src/core/types.ts';
 
 const REPO_URL = 'https://github.com/pierreaubert/spinorama.git';
@@ -161,9 +162,9 @@ function processCatalog(repoDir: string, entries: CatalogEntry[]): SyncResult {
     };
     try {
       const data = buildSpeaker(source);
-      writeFileSync(join(OUT_DIR, `${entry.id}.json`), JSON.stringify(data));
+      writeFileSync(join(OUT_DIR, `${entry.id}.spb`), encodeSpeakerBinary(data));
       built.push(indexEntryFor(data));
-      console.log(`  [${i + 1}/${entries.length}] ${entry.name} -> ${entry.id}.json`);
+      console.log(`  [${i + 1}/${entries.length}] ${entry.name} -> ${entry.id}.spb`);
     } catch (err) {
       skipped.push({ id: entry.id, name: entry.name, reason: (err as Error).message });
     }
