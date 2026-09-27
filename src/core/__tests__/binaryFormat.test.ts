@@ -28,11 +28,6 @@ const sample: SpeakerData = {
   vertical: {
     'On Axis': [80.12, 81.5, 79.99, 60],
   },
-  stepImpulse: {
-    timeMs: [0, 0.02, 0.04],
-    impulse: [0.001, 1.234567, -0.5],
-    step: [0, 0.5, 1],
-  },
 };
 
 describe('binaryFormat', () => {
@@ -50,7 +45,6 @@ describe('binaryFormat', () => {
     expect(maxAbsError(decoded.freqHz, sample.freqHz)).toBeLessThan(1e-3);
     expect(maxAbsError(decoded.cea2034!.onAxis!, sample.cea2034!.onAxis!)).toBeLessThan(1e-3);
     expect(maxAbsError(decoded.horizontal!['10°'], sample.horizontal!['10°'])).toBeLessThan(1e-3);
-    expect(maxAbsError(decoded.stepImpulse!.impulse, sample.stepImpulse!.impulse)).toBeLessThan(1e-5);
   });
 
   it('produces a smaller payload than the equivalent JSON at realistic curve lengths', () => {

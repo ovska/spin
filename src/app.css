@@ -369,19 +369,6 @@
   white-space: nowrap;
 }
 
-/* Step / impulse */
-.step-view {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.step-view__label {
-  margin: 6px 12px;
-  font-size: 12px;
-  color: var(--text-dim);
-}
-
 /* Landscape phone: the plot fills the screen, everything else not needed
  * to read it collapses out of the way. */
 @media (max-width: 900px) and (orientation: landscape) {
@@ -395,8 +382,7 @@
   .cursor-readout,
   .controls,
   .sweetspot-note,
-  .offaxis-view__toolbar,
-  .step-view__label {
+  .offaxis-view__toolbar {
     display: none;
   }
 
@@ -409,8 +395,7 @@
   }
 
   .plot-host,
-  .offaxis-view,
-  .step-view {
+  .offaxis-view {
     flex: 1 1 auto;
     height: auto;
     min-height: 0;

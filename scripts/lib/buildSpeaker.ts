@@ -12,7 +12,6 @@ import { buildLogGrid } from '../../src/core/grid.ts';
 import { resampleToGrid } from '../../src/core/resample.ts';
 import { computeCea2034, type Plane } from '../../src/core/cea2034.ts';
 import { listeningWindowOffsetDb } from '../../src/core/normalize.ts';
-import { computeMinPhase } from '../../src/core/minphase.ts';
 import type { SpeakerData, SpeakerIndexEntry, PlaneJson } from '../../src/core/types.ts';
 
 export const GRID = buildLogGrid();
@@ -23,10 +22,6 @@ function round2(x: number): number {
 
 function roundCurve(xs: number[]): number[] {
   return xs.map(round2);
-}
-
-function round6(x: number): number {
-  return Math.round(x * 1e6) / 1e6;
 }
 
 interface NativePlane {
@@ -112,7 +107,6 @@ export function buildSpeaker(spec: SpeakerSource): SpeakerData {
   const license = existsSync(licensePath) ? readFileSync(licensePath, 'utf-8').trim() : (spec.licenseFallback ?? '');
 
   const normalizedOnAxis = spin.onAxis.map((v2) => v2 - offsetDb);
-  const minPhase = computeMinPhase(GRID, normalizedOnAxis);
 
   return {
     id: spec.id,
@@ -132,11 +126,6 @@ export function buildSpeaker(spec: SpeakerSource): SpeakerData {
     },
     horizontal: shiftPlane(h, offsetDb),
     vertical: shiftPlane(v, offsetDb),
-    stepImpulse: {
-      timeMs: minPhase.timeMs.map((t) => Math.round(t * 1000) / 1000),
-      impulse: minPhase.impulse.map(round6),
-      step: minPhase.step.map(round6),
-    },
   };
 }
 
@@ -150,7 +139,6 @@ export function indexEntryFor(data: SpeakerData): SpeakerIndexEntry {
       inRoom: !!data.cea2034?.estimatedInRoom,
       sweetSpot: !!(data.horizontal && data.vertical),
       offAxis: !!(data.horizontal && data.vertical),
-      step: !!data.stepImpulse,
     },
   };
 }

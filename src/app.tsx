@@ -8,7 +8,6 @@ import { SpeakerPicker } from './components/SpeakerPicker';
 import { ViewTabs } from './components/ViewTabs';
 import { PlotView } from './components/PlotView';
 import { OffAxisView } from './components/OffAxisView';
-import { StepImpulseView } from './components/StepImpulseView';
 import { CursorReadout } from './components/CursorReadout';
 import { Controls } from './components/Controls';
 import { AboutSheet } from './components/AboutSheet';
@@ -94,16 +93,10 @@ export function App() {
           </button>
         )}
       </div>
-      {tab === 'offaxis' ? (
-        <OffAxisView />
-      ) : tab === 'step' ? (
-        <StepImpulseView />
-      ) : (
-        <PlotView view={tab} />
-      )}
+      {tab === 'offaxis' ? <OffAxisView /> : <PlotView view={tab} />}
       {tab === 'sweetspot' && <p class="sweetspot-note">Off-plane points estimated from H/V planes.</p>}
-      {tab !== 'step' && <CursorReadout />}
-      {tab !== 'step' && <Controls />}
+      <CursorReadout />
+      <Controls />
       <SpeakerPicker />
       <AboutSheet />
       <SweetSpotSettingsSheet />
